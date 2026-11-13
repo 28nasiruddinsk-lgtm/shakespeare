@@ -1,0 +1,11 @@
+# PHPMailer library source - not meant to be fetched directly by URL.
+# submit-form.php still requires() these files fine from the server side;
+# this only blocks direct HTTP requests to them.
+
+<IfModule mod_authz_core.c>
+  Require all denied
+</IfModule>
+<IfModule !mod_authz_core.c>
+  Order allow,deny
+  Deny from all
+</IfModule>

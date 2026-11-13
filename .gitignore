@@ -1,0 +1,11 @@
+# Secrets: live only on the server
+includes/mail-config.php
+# Form submissions and logs (customer data)
+storage/*.csv
+storage/*.log
+lp/*.log
+# Debug scripts that print mail settings
+diag.php
+smtp-test.php
+# SSL validation files belong to the server
+.well-known/

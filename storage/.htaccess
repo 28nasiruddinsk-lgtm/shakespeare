@@ -1,0 +1,15 @@
+# Block all direct web access to this folder. It only holds a CSV backup of
+# form submissions (names, emails, phone numbers, messages) and an error
+# log - none of it is meant to be fetched by URL. PHP can still read/write
+# these files from submit-form.php; this only blocks HTTP requests to them.
+
+# Apache 2.4+
+<IfModule mod_authz_core.c>
+  Require all denied
+</IfModule>
+
+# Apache 2.2 fallback
+<IfModule !mod_authz_core.c>
+  Order allow,deny
+  Deny from all
+</IfModule>

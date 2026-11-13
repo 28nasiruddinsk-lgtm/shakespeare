@@ -1,0 +1,7 @@
+---
+# cPanel > Git Version Control > Deploy HEAD Commit copies the repo into public_html.
+# No --delete: files that are not in git (mail-config.php, storage/*.csv) stay on the server.
+deployment:
+  tasks:
+    - export DEPLOYPATH=$HOME/public_html/
+    - /usr/bin/rsync -a --exclude=.git --exclude=.cpanel.yml --exclude=.gitignore ./ $DEPLOYPATH

@@ -1,0 +1,11 @@
+# This folder holds mail-config.php (SMTP credentials) among other PHP
+# includes. PHP files already execute rather than being served as text, so
+# this is defense-in-depth, not the only protection.
+
+<IfModule mod_authz_core.c>
+  Require all denied
+</IfModule>
+<IfModule !mod_authz_core.c>
+  Order allow,deny
+  Deny from all
+</IfModule>
