@@ -1,0 +1,10 @@
+# Never show a file list, even if index.php goes missing.
+Options -Indexes
+
+# Backups, logs, data files and debug scripts are never downloadable.
+<FilesMatch "\.(zip|rar|7z|tar|gz|sql|log|csv|bak|env|ini)$">
+  Require all denied
+</FilesMatch>
+<FilesMatch "^(diag|smtp-test)\.php$">
+  Require all denied
+</FilesMatch>
