@@ -7,17 +7,39 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <style>
-        body { 
-            font-family: 'Inter', sans-serif; 
-            background: #f8f9fa; 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            min-height: 100vh; 
-            margin: 0; 
-            text-align: center; 
-            padding: 20px;
+        * { box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f8f9fa;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            color: #333;
+        }
+        a { text-decoration: none; color: inherit; }
+        main { flex: 1; display: flex; justify-content: center; align-items: center; padding: 40px 20px; text-align: center; }
+
+        /* Header + footer: same as the landing page (lp/index.php) */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 30px; }
+        .top-header { background: #fff; padding: 16px 0; border-bottom: 1px solid #E5E7EB; }
+        .header-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; }
+        .header-inner .brand-logo { display: flex; align-items: center; }
+        .header-inner .brand-logo img { height: 70px; width: auto; display: block; }
+        .header-contact { display: flex; align-items: center; gap: 24px; font-size: 0.9rem; color: #666; flex-wrap: wrap; }
+        .header-contact div { display: flex; align-items: center; gap: 8px; }
+        .header-contact i { color: #F5B041; }
+        .header-contact a:hover { color: #0E1B3D; }
+        footer { background: #0B1432; color: rgba(255,255,255,0.6); padding: 40px 0; text-align: center; font-size: 0.8rem; }
+        footer p { color: inherit; font-size: inherit; margin-bottom: 8px; }
+        footer a { color: rgba(255,255,255,0.6); margin: 0 10px; }
+        footer a:hover { color: #fff; }
+        @media (max-width: 768px) {
+            .container { padding: 0 16px; }
+            .header-inner { flex-direction: column; text-align: center; }
+            .header-contact { flex-direction: column; gap: 8px; }
         }
         .thank-you-box { 
             background: #fff; 
@@ -82,6 +104,20 @@
     
 </head>
 <body>
+    <header class="top-header">
+        <div class="container header-inner">
+            <a href="/" class="brand-logo">
+                <img src="https://shakespearepublishinghouse.com/assets/images/logo.png" alt="The Shakespeare Publishing House">
+            </a>
+            <div class="header-contact">
+                <div><i class="fas fa-envelope"></i> <a href="mailto:info@theshakespearepublishinghouse.com">info@theshakespearepublishinghouse.com</a></div>
+                <div><i class="fas fa-phone-alt"></i> <a href="tel:+16463890212" style="font-weight:700;">+1 646 389 0212</a></div>
+                <div><i class="fas fa-clock"></i> Mon - Fri, 9 AM - 6 PM</div>
+            </div>
+        </div>
+    </header>
+
+    <main>
     <div class="thank-you-box">
         <!-- 🟢 Logo automatically pulls from your main assets folder -->
         <img src="https://shakespearepublishinghouse.com/assets/images/logo.png" alt="The Shakespeare Publishing House">
@@ -91,6 +127,9 @@
         
         <a href="/" class="btn-back">Return to Homepage</a>
     </div>
+    </main>
+
+    <footer><div class="container"><p>&copy; 2026 The Shakespeare Publishing House. All rights reserved.</p><a href="https://theshakespearepublishinghouse.com/Terms-and-conditions.php">Terms and Conditions</a><a href="https://theshakespearepublishinghouse.com/Privacy-Policy.php">Privacy Policy</a></div></footer>
 </body>
 
  <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=eb0092bd-b6da-4958-9379-b51e54268e92"></script>

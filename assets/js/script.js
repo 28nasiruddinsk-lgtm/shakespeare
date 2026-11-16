@@ -244,7 +244,7 @@ siteForms.forEach((form) => {
     try {
       const response = await fetch(form.action || 'submit-form.php', {
         method: 'POST',
-        body: new FormData(form),
+        body: (() => { const data = new FormData(form); data.set('page_url', window.location.href); return data; })(),
         headers: { 'X-Requested-With': 'XMLHttpRequest' },
       });
       const result = await response.json();

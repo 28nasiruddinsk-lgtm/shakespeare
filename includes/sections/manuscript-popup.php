@@ -121,7 +121,8 @@
     btn.disabled = true; btn.textContent = 'Sending...';
     status.className = 'spm-status'; status.textContent = '';
 
-    fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'X-Requested-With': 'XMLHttpRequest' } })
+    var data = new FormData(form); data.set('page_url', window.location.href);
+    fetch(form.action, { method: 'POST', body: data, headers: { 'X-Requested-With': 'XMLHttpRequest' } })
       .then(function (r) { return r.json().then(function (d) { return { ok: r.ok && d.ok, msg: d.message }; }); })
       .then(function (res) {
         if (!res.ok) throw new Error(res.msg || 'Something went wrong. Please try again.');

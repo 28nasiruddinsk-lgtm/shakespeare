@@ -44,6 +44,8 @@ $email = filter_var(form_value('email'), FILTER_VALIDATE_EMAIL) ? form_value('em
 $phone = clean_text(form_value('phone'));
 $service = clean_text(form_value('service'));
 $message = clean_text(form_value('message'));
+// Page the form was sent from: set by the page's JS, Referer as fallback.
+$pageUrl = substr(clean_text(form_value('page_url')) ?: ($_SERVER['HTTP_REFERER'] ?? ''), 0, 500);
 // Hidden anti-spam field. Renamed from "website" because browser autofill
 // was filling it and real enquiries were being silently thrown away.
 $honeypot = form_value('hp_check');
@@ -86,7 +88,7 @@ if ($storageOk) {
       $phone,
       $service,
       $message,
-      $_SERVER['HTTP_REFERER'] ?? '',
+      $pageUrl,
       $_SERVER['REMOTE_ADDR'] ?? '',
     ]) !== false;
 
@@ -154,7 +156,7 @@ $bodyLines = [
   'Message:',
   $message ?: 'N/A',
   '',
-  'Source: ' . ($_SERVER['HTTP_REFERER'] ?? 'Direct'),
+  'Page URL: ' . ($pageUrl ?: 'Unknown'),
   'IP: ' . ($_SERVER['REMOTE_ADDR'] ?? 'Unknown'),
 ];
 
