@@ -4602,3 +4602,13 @@ iframe[src*="zendesk"],
 .review-count{color:var(--muted);font-size:14px;margin-bottom:18px}
 @media(max-width:1000px){.review-wall{grid-template-columns:repeat(2,1fr)}.reviews-hero-grid{grid-template-columns:1fr;gap:20px}}
 @media(max-width:640px){.review-wall{grid-template-columns:1fr}.reviews-hero{padding:48px 0 36px}.platform-badge{width:100%;justify-content:center}}
+
+/* Phone field flag + country code (intl-tel-input): the form's "label span" rules above
+   (display:block, uppercase, margin) must not reach the parts inside the phone field. */
+label .iti.iti span { margin: 0; letter-spacing: normal; text-transform: none; }
+label .iti .iti__flag,
+label .iti .iti__arrow,
+label .iti .iti__country-name,
+label .iti .iti__dial-code { display: inline-block; }
+label .iti .iti__selected-country-primary { display: flex; }
+label .iti .iti__selected-dial-code { display: inline; font-size: 14px; font-weight: 500; color: #111; }
