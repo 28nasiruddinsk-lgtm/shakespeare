@@ -4605,10 +4605,19 @@ iframe[src*="zendesk"],
 
 /* Phone field flag + country code (intl-tel-input): the form's "label span" rules above
    (display:block, uppercase, margin) must not reach the parts inside the phone field. */
-label .iti.iti span { margin: 0; letter-spacing: normal; text-transform: none; }
+label .iti.iti span { margin-bottom: 0; letter-spacing: normal; text-transform: none; }
 label .iti .iti__flag,
 label .iti .iti__arrow,
 label .iti .iti__country-name,
 label .iti .iti__dial-code { display: inline-block; }
 label .iti .iti__selected-country-primary { display: flex; }
 label .iti .iti__selected-dial-code { display: inline; font-size: 14px; font-weight: 500; color: #111; }
+/* The form's input styles (padding, border, height) must not reach the country search box. */
+label .iti .iti__search-input,
+label .iti .iti__search-input:focus {
+  min-height: 0;
+  border: 0;
+  box-shadow: none;
+  background: transparent;
+  padding: 8px calc(var(--iti-spacer-horizontal) + var(--iti-clear-icon-size) + var(--iti-spacer-horizontal)) 8px calc(var(--iti-spacer-horizontal) + var(--iti-globe-icon-size) + var(--iti-spacer-horizontal));
+}

@@ -46,6 +46,8 @@ $service = clean_text(form_value('service'));
 $message = clean_text(form_value('message'));
 // Page the form was sent from: set by the page's JS, Referer as fallback.
 $pageUrl = substr(clean_text(form_value('page_url')) ?: ($_SERVER['HTTP_REFERER'] ?? ''), 0, 500);
+// City, state/province, country from the visitor's IP (hidden field filled by assets/js/phone-input.js).
+$location = substr(clean_text(form_value('visitor_location')), 0, 200);
 // Hidden anti-spam field. Renamed from "website" because browser autofill
 // was filling it and real enquiries were being silently thrown away.
 $honeypot = form_value('hp_check');
@@ -90,7 +92,7 @@ if ($storageOk) {
     fseek($handle, 0, SEEK_END);
 
     if ($isNewFile) {
-      fputcsv($handle, ['submitted_at', 'form_type', 'name', 'email', 'phone', 'service', 'message', 'source', 'ip']);
+      fputcsv($handle, ['submitted_at', 'form_type', 'name', 'email', 'phone', 'service', 'message', 'source', 'ip', 'location']);
     }
 
     $saved = fputcsv($handle, [
@@ -103,6 +105,7 @@ if ($storageOk) {
       $message,
       $pageUrl,
       $_SERVER['REMOTE_ADDR'] ?? '',
+      $location,
     ]) !== false;
 
     fflush($handle);
@@ -170,6 +173,7 @@ $bodyLines = [
   $message ?: 'N/A',
   '',
   'Page URL: ' . ($pageUrl ?: 'Unknown'),
+  'Location: ' . ($location ?: 'Unknown'),
   'IP: ' . ($_SERVER['REMOTE_ADDR'] ?? 'Unknown'),
 ];
 

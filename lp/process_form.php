@@ -56,6 +56,8 @@ $phone = trim((string)($_POST['phone'] ?? ''));
 $title = trim((string)($_POST['title'] ?? ''));
 $message = trim((string)($_POST['message'] ?? ''));
 $pageUrl = trim((string)($_POST['page_url'] ?? ''));
+// City, state/province, country from the visitor's IP (hidden field filled by /assets/js/phone-input.js).
+$location = mb_substr(trim(strip_tags((string)($_POST['visitor_location'] ?? ''))), 0, 200);
 
 
 // ==========================================================
@@ -239,6 +241,12 @@ try {
         'UTF-8'
     );
 
+    $safeLocation = htmlspecialchars(
+        $location !== '' ? $location : '-',
+        ENT_QUOTES | ENT_SUBSTITUTE,
+        'UTF-8'
+    );
+
 
     // ======================================================
     // EMAIL
@@ -327,6 +335,11 @@ try {
                 <td>' . $safePageUrl . '</td>
             </tr>
 
+            <tr>
+                <td><strong>Location</strong></td>
+                <td>' . $safeLocation . '</td>
+            </tr>
+
         </table>
 
     </div>
@@ -351,7 +364,8 @@ try {
         "Message:\n" .
         $message . "\n\n" .
         "Submitted From:\n" .
-        $pageUrl;
+        $pageUrl . "\n\n" .
+        "Location: " . ($location !== '' ? $location : '-');
 
 
     // ======================================================
