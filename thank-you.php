@@ -11,7 +11,7 @@ include __DIR__ . '/includes/layout/header.php';
   <section class="service-overview section-border">
     <div class="container" style="max-width:720px;text-align:center;padding:80px 16px">
       <p class="eyebrow gold">Submission Received</p>
-      <h1>Thank You.</h1>
+      <h1 style="margin:0 auto">Thank You.</h1>
       <div class="gold-line" style="margin:18px auto"></div>
       <p>
         Your request has reached our editorial team. We will review your project and contact you
