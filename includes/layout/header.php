@@ -16,6 +16,8 @@
 <link rel="apple-touch-icon" href="assets/images/Shakespeare Pubishing House-14.png">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@29.5.10/dist/css/intlTelInput.min.css">
+  <style>.iti{display:block;width:100%}</style>
   <link rel="stylesheet" href="assets/css/style.css?v=<?= @filemtime(__DIR__ . '/../../assets/css/style.css') ?: time(); ?>">
   
   <script type="application/ld+json">

@@ -266,6 +266,8 @@
 
 
   <!-- Main JS -->
+  <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@29.5.10/dist/js/intlTelInputWithUtils.min.js"></script>
+  <script src="assets/js/phone-input.js?v=<?= @filemtime(__DIR__ . '/../../assets/js/phone-input.js') ?: time(); ?>"></script>
   <script src="assets/js/script.js?v=<?= @filemtime(__DIR__ . '/../../assets/js/script.js') ?: time(); ?>"></script>
 
 </body>
