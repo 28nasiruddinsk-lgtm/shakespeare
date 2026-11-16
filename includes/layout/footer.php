@@ -29,14 +29,14 @@
 
           <label>
             <span>Email</span>
-            <input type="email" name="email" placeholder="you@example.com" required>
+            <input type="email" maxlength="120" pattern="[^\s@]+@[^\s@]+\.[A-Za-z]{2,}" title="Email address like name@example.com" name="email" placeholder="you@example.com" required>
           </label>
         </div>
 
         <div class="form-row">
           <label>
             <span>Phone</span>
-            <input type="tel" name="phone" placeholder="Phone number">
+            <input type="tel" inputmode="tel" maxlength="20" pattern="(?=(?:[^0-9]*[0-9]){7,15}[^0-9]*$)\+?[0-9\s\(\)\.\-]+" title="Phone number: 7 to 15 digits, may start with + (e.g. +1 646 258 0616)" name="phone" placeholder="Phone number">
           </label>
 
           <label>
@@ -122,7 +122,7 @@
         <form class="js-site-form newsletter-form" action="submit-form.php" method="post">
           <input type="hidden" name="form_type" value="Newsletter">
           <input class="form-honeypot" type="text" name="website" autocomplete="off" tabindex="-1" aria-hidden="true">
-          <input type="email" name="email" placeholder="Enter your email address" required>
+          <input type="email" maxlength="120" pattern="[^\s@]+@[^\s@]+\.[A-Za-z]{2,}" title="Email address like name@example.com" name="email" placeholder="Enter your email address" required>
           <button aria-label="Subscribe">&rarr;</button>
           <p class="form-status" role="status" aria-live="polite"></p>
         </form>

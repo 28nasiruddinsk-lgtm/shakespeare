@@ -42,11 +42,11 @@
 
       <div class="spm-row">
         <label><span>Name</span><input type="text" name="name" placeholder="Your name" required></label>
-        <label><span>Email</span><input type="email" name="email" placeholder="you@example.com" required></label>
+        <label><span>Email</span><input type="email" maxlength="120" pattern="[^\s@]+@[^\s@]+\.[A-Za-z]{2,}" title="Email address like name@example.com" name="email" placeholder="you@example.com" required></label>
       </div>
 
       <div class="spm-row">
-        <label><span>Phone</span><input type="tel" name="phone" placeholder="+1 646 258 0616"></label>
+        <label><span>Phone</span><input type="tel" inputmode="tel" maxlength="20" pattern="(?=(?:[^0-9]*[0-9]){7,15}[^0-9]*$)\+?[0-9\s\(\)\.\-]+" title="Phone number: 7 to 15 digits, may start with + (e.g. +1 646 258 0616)" name="phone" placeholder="+1 646 258 0616"></label>
         <label><span>Project Type</span>
           <select name="service">
             <option>Book Publishing</option>

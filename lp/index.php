@@ -536,8 +536,8 @@
                         <form id="mainForm" action="process_form.php" method="POST">
                             <input type="hidden" name="page_url" class="page-url-field" />
                             <input type="text" name="name" placeholder="Full Name" required />
-                            <input type="email" name="email" placeholder="Email Address" required />
-                            <input type="tel" name="phone" placeholder="Phone Number" required />
+                            <input type="email" maxlength="120" pattern="[^\s@]+@[^\s@]+\.[A-Za-z]{2,}" title="Email address like name@example.com" name="email" placeholder="Email Address" required />
+                            <input type="tel" inputmode="tel" maxlength="20" pattern="(?=(?:[^0-9]*[0-9]){7,15}[^0-9]*$)\+?[0-9\s\(\)\.\-]+" title="Phone number: 7 to 15 digits, may start with + (e.g. +1 646 258 0616)" name="phone" placeholder="Phone Number" required />
                             <!--<input type="text" name="title" placeholder="Book Title (Optional)" />-->
                             <textarea name="message" rows="3" placeholder="Tell us about your manuscript..."></textarea>
                             <button type="submit" class="btn btn-gold btn-block"><i class="fas fa-arrow-right"></i> GET MY FREE QUOTE</button>
@@ -737,9 +737,9 @@
                             <label for="cta_name">Full Name</label>
                             <input type="text" id="cta_name" name="name" placeholder="John Doe" required />
                             <label for="cta_email">Email</label>
-                            <input type="email" id="cta_email" name="email" placeholder="Example@Example.Com" required />
+                            <input type="email" maxlength="120" pattern="[^\s@]+@[^\s@]+\.[A-Za-z]{2,}" title="Email address like name@example.com" id="cta_email" name="email" placeholder="Example@Example.Com" required />
                             <label for="cta_phone">Contact Number</label>
-                            <input type="tel" id="cta_phone" name="phone" placeholder="+1 (234)-567-890" required />
+                            <input type="tel" inputmode="tel" maxlength="20" pattern="(?=(?:[^0-9]*[0-9]){7,15}[^0-9]*$)\+?[0-9\s\(\)\.\-]+" title="Phone number: 7 to 15 digits, may start with + (e.g. +1 646 258 0616)" id="cta_phone" name="phone" placeholder="+1 (234)-567-890" required />
                             <label for="cta_message">Message</label>
                             <textarea id="cta_message" name="message" rows="3" placeholder="Text Here..."></textarea>
                             <button type="submit" class="btn-white">Claim Your Expert Consultation</button>
@@ -790,7 +790,7 @@
         <form id="contactForm" action="process_form.php" method="POST">
             <input type="hidden" name="page_url" class="page-url-field" />
             <input type="text" name="name" placeholder="Your Name" required />
-            <input type="email" name="email" placeholder="Your Email" required />
+            <input type="email" maxlength="120" pattern="[^\s@]+@[^\s@]+\.[A-Za-z]{2,}" title="Email address like name@example.com" name="email" placeholder="Your Email" required />
             <label for="query_type">Query Type</label>
             <select name="query_type" id="query_type">
                 <option value="General Query">General Query</option>
@@ -812,8 +812,8 @@
     <!--        <form id="modalForm" action="process_form.php" method="POST">-->
     <!--            <input type="hidden" name="page_url" class="page-url-field" />-->
     <!--            <input type="text" name="name" placeholder="Full Name" required />-->
-    <!--            <input type="email" name="email" placeholder="Email Address" required />-->
-    <!--            <input type="tel" name="phone" placeholder="Phone Number" />-->
+    <!--            <input type="email" maxlength="120" pattern="[^\s@]+@[^\s@]+\.[A-Za-z]{2,}" title="Email address like name@example.com" name="email" placeholder="Email Address" required />-->
+    <!--            <input type="tel" inputmode="tel" maxlength="20" pattern="(?=(?:[^0-9]*[0-9]){7,15}[^0-9]*$)\+?[0-9\s\(\)\.\-]+" title="Phone number: 7 to 15 digits, may start with + (e.g. +1 646 258 0616)" name="phone" placeholder="Phone Number" />-->
     <!--            <textarea name="message" rows="3" placeholder="Tell us about your manuscript and goals..."></textarea>-->
     <!--            <button type="submit" class="btn btn-gold btn-block"><i class="fas fa-paper-plane"></i> REQUEST A CALLBACK</button>-->
     <!--        </form>-->

@@ -62,6 +62,19 @@ if (!$email || (!$isNewsletter && $name === '')) {
   exit;
 }
 
+// Same rules as the form fields' pattern attributes.
+$phoneDigits = strlen(preg_replace('/\D/', '', $phone));
+if ($phone !== '' && (!preg_match('/^\+?[0-9\s().\-]+$/', $phone) || $phoneDigits < 7 || $phoneDigits > 15)) {
+  http_response_code(422);
+  echo json_encode(['ok' => false, 'message' => 'Please enter a valid phone number (7 to 15 digits).']);
+  exit;
+}
+if (!preg_match('/\.[A-Za-z]{2,}$/', $email)) {
+  http_response_code(422);
+  echo json_encode(['ok' => false, 'message' => 'Please enter a valid email address.']);
+  exit;
+}
+
 $submittedAt = date('Y-m-d H:i:s');
 
 // ---- 1. Save to CSV first, so a submission is never lost even if the ----

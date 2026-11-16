@@ -70,8 +70,14 @@ if ($email === '') {
     responseError('Email is empty');
 }
 
-if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+if (!filter_var($email, FILTER_VALIDATE_EMAIL) || !preg_match('/\.[A-Za-z]{2,}$/', $email)) {
     responseError('Invalid email address');
+}
+
+// Same rules as the form fields' pattern attributes.
+$phoneDigits = strlen(preg_replace('/\D/', '', $phone));
+if ($phone !== '' && (!preg_match('/^\+?[0-9\s().\-]+$/', $phone) || $phoneDigits < 7 || $phoneDigits > 15)) {
+    responseError('Invalid phone number');
 }
 
 
