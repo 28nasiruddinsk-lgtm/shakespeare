@@ -7,7 +7,14 @@ require_once __DIR__ . '/includes/helpers.php';
 include __DIR__ . '/includes/layout/header.php';
 ?>
 
-<main class="service-page">
+<!-- Thank-you page only: no top bar, header, contact section or footer; message centred on the screen.
+     The shared header/footer stay included for their <head> styles, chat widgets and scripts. -->
+<style>
+  .top-quote, .site-header, .footer-contact-section, .site-footer { display: none !important; }
+  .thank-you-page .service-overview { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 0; border: 0; }
+</style>
+
+<main class="service-page thank-you-page">
   <section class="service-overview section-border">
     <div class="container" style="max-width:720px;text-align:center;padding:80px 16px">
       <p class="eyebrow gold">Submission Received</p>
