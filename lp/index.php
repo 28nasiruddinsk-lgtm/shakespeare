@@ -495,7 +495,7 @@
             </a>
             <div class="header-contact">
                 <div><i class="fas fa-envelope"></i> <a href="mailto:info@theshakespearepublishinghouse.com">info@theshakespearepublishinghouse.com</a></div>
-                <div><i class="fas fa-phone-alt"></i> <a href="tel:+16463890212" style="font-weight:700;">+1 646 389 0212</a></div>
+                <div><i class="fas fa-phone-alt"></i> <a href="tel:+16463893047" style="font-weight:700;">+1 646 389 3047</a></div>
                 <div><i class="fas fa-clock"></i> Mon - Fri, 9 AM - 6 PM</div>
             </div>
         </div>
@@ -539,7 +539,7 @@
                             <input type="hidden" name="page_url" class="page-url-field" />
                             <input type="text" name="name" placeholder="Full Name" required />
                             <input type="email" maxlength="120" pattern="[^\s@]+@[^\s@]+\.[A-Za-z]{2,}" title="Email address like name@example.com" name="email" placeholder="Email Address" required />
-                            <input type="tel" inputmode="tel" maxlength="20" pattern="(?=(?:[^0-9]*[0-9]){7,15}[^0-9]*$)\+?[0-9\s\(\)\.\-]+" title="Phone number: 7 to 15 digits, may start with + (e.g. +1 646 258 0616)" name="phone" placeholder="Phone Number" required />
+                            <input type="tel" inputmode="tel" maxlength="20" pattern="(?=(?:[^0-9]*[0-9]){7,15}[^0-9]*$)\+?[0-9\s\(\)\.\-]+" title="Phone number: 7 to 15 digits, may start with + (e.g. +1 646 389 3047)" name="phone" placeholder="Phone Number" required />
                             <!--<input type="text" name="title" placeholder="Book Title (Optional)" />-->
                             <textarea name="message" rows="3" placeholder="Tell us about your manuscript..."></textarea>
                             <button type="submit" class="btn btn-gold btn-block"><i class="fas fa-arrow-right"></i> GET MY FREE QUOTE</button>
@@ -741,7 +741,7 @@
                             <label for="cta_email">Email</label>
                             <input type="email" maxlength="120" pattern="[^\s@]+@[^\s@]+\.[A-Za-z]{2,}" title="Email address like name@example.com" id="cta_email" name="email" placeholder="Example@Example.Com" required />
                             <label for="cta_phone">Contact Number</label>
-                            <input type="tel" inputmode="tel" maxlength="20" pattern="(?=(?:[^0-9]*[0-9]){7,15}[^0-9]*$)\+?[0-9\s\(\)\.\-]+" title="Phone number: 7 to 15 digits, may start with + (e.g. +1 646 258 0616)" id="cta_phone" name="phone" placeholder="+1 (234)-567-890" required />
+                            <input type="tel" inputmode="tel" maxlength="20" pattern="(?=(?:[^0-9]*[0-9]){7,15}[^0-9]*$)\+?[0-9\s\(\)\.\-]+" title="Phone number: 7 to 15 digits, may start with + (e.g. +1 646 389 3047)" id="cta_phone" name="phone" placeholder="+1 (234)-567-890" required />
                             <label for="cta_message">Message</label>
                             <textarea id="cta_message" name="message" rows="3" placeholder="Text Here..."></textarea>
                             <button type="submit" class="btn-white">Claim Your Expert Consultation</button>
@@ -815,7 +815,7 @@
     <!--            <input type="hidden" name="page_url" class="page-url-field" />-->
     <!--            <input type="text" name="name" placeholder="Full Name" required />-->
     <!--            <input type="email" maxlength="120" pattern="[^\s@]+@[^\s@]+\.[A-Za-z]{2,}" title="Email address like name@example.com" name="email" placeholder="Email Address" required />-->
-    <!--            <input type="tel" inputmode="tel" maxlength="20" pattern="(?=(?:[^0-9]*[0-9]){7,15}[^0-9]*$)\+?[0-9\s\(\)\.\-]+" title="Phone number: 7 to 15 digits, may start with + (e.g. +1 646 258 0616)" name="phone" placeholder="Phone Number" />-->
+    <!--            <input type="tel" inputmode="tel" maxlength="20" pattern="(?=(?:[^0-9]*[0-9]){7,15}[^0-9]*$)\+?[0-9\s\(\)\.\-]+" title="Phone number: 7 to 15 digits, may start with + (e.g. +1 646 389 3047)" name="phone" placeholder="Phone Number" />-->
     <!--            <textarea name="message" rows="3" placeholder="Tell us about your manuscript and goals..."></textarea>-->
     <!--            <button type="submit" class="btn btn-gold btn-block"><i class="fas fa-paper-plane"></i> REQUEST A CALLBACK</button>-->
     <!--        </form>-->

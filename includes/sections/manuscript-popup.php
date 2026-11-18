@@ -46,7 +46,7 @@
       </div>
 
       <div class="spm-row">
-        <label><span>Phone</span><input type="tel" inputmode="tel" maxlength="20" pattern="(?=(?:[^0-9]*[0-9]){7,15}[^0-9]*$)\+?[0-9\s\(\)\.\-]+" title="Phone number: 7 to 15 digits, may start with + (e.g. +1 646 258 0616)" name="phone" placeholder="+1 646 258 0616"></label>
+        <label><span>Phone</span><input type="tel" inputmode="tel" maxlength="20" pattern="(?=(?:[^0-9]*[0-9]){7,15}[^0-9]*$)\+?[0-9\s\(\)\.\-]+" title="Phone number: 7 to 15 digits, may start with + (e.g. +1 646 389 3047)" name="phone" placeholder="+1 646 389 3047"></label>
         <label><span>Project Type</span>
           <select name="service">
             <option>Book Publishing</option>
@@ -130,7 +130,7 @@
       })
       .catch(function (err) {
         status.className = 'spm-status err';
-        status.textContent = err.message || 'Please call us at +1 646 258 0616.';
+        status.textContent = err.message || 'Please call us at +1 646 389 3047.';
       })
       .then(function () { btn.disabled = false; btn.textContent = 'Send for Review'; });
   });

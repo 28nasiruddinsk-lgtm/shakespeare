@@ -311,7 +311,7 @@
         <div class="contact-block">
             <span class="address-line">1405 New York Ave, Huntington Station, NY 11746, United States</span>
             <span><span class="label">Email:</span> <a href="mailto:info@shakespearebookpublishinghouse.com">info@shakespearebookpublishinghouse.com</a></span>
-            <span><span class="label">Phone:</span> <a href="tel:+16462580616">+1 646 258 0616</a></span>
+            <span><span class="label">Phone:</span> <a href="tel:+16463893047">+1 646 389 3047</a></span>
         </div>
     </div>
 

@@ -24,7 +24,7 @@ include __DIR__ . '/includes/layout/header.php';
         Your request has reached our editorial team. We will review your project and contact you
         within one business day with the right next step.
       </p>
-      <p>Need us sooner? Call <a href="tel:+16462580616">+1 646 258 0616</a>.</p>
+      <p>Need us sooner? Call <a href="tel:+16463893047">+1 646 389 3047</a>.</p>
       <div class="hero-actions" style="justify-content:center;margin-top:28px">
         <a href="index.php" class="btn btn-green">Back to Home</a>
         <a href="blog.php" class="btn btn-outline">Read Our Blog</a>

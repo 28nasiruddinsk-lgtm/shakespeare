@@ -111,7 +111,7 @@
             </a>
             <div class="header-contact">
                 <div><i class="fas fa-envelope"></i> <a href="mailto:info@theshakespearepublishinghouse.com">info@theshakespearepublishinghouse.com</a></div>
-                <div><i class="fas fa-phone-alt"></i> <a href="tel:+16463890212" style="font-weight:700;">+1 646 389 0212</a></div>
+                <div><i class="fas fa-phone-alt"></i> <a href="tel:+16463893047" style="font-weight:700;">+1 646 389 3047</a></div>
                 <div><i class="fas fa-clock"></i> Mon - Fri, 9 AM - 6 PM</div>
             </div>
         </div>

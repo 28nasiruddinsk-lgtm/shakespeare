@@ -36,7 +36,7 @@
         <div class="form-row">
           <label>
             <span>Phone</span>
-            <input type="tel" inputmode="tel" maxlength="20" pattern="(?=(?:[^0-9]*[0-9]){7,15}[^0-9]*$)\+?[0-9\s\(\)\.\-]+" title="Phone number: 7 to 15 digits, may start with + (e.g. +1 646 258 0616)" name="phone" placeholder="Phone number">
+            <input type="tel" inputmode="tel" maxlength="20" pattern="(?=(?:[^0-9]*[0-9]){7,15}[^0-9]*$)\+?[0-9\s\(\)\.\-]+" title="Phone number: 7 to 15 digits, may start with + (e.g. +1 646 389 3047)" name="phone" placeholder="Phone number">
           </label>
 
           <label>

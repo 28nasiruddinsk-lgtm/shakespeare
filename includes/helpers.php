@@ -7,8 +7,8 @@ function component($name, $vars = []){
 
 // One source for the business details, so pages, footer and schema always match.
 const SITE_URL = 'https://shakespearebookpublishinghouse.com/';
-const SITE_PHONE = '+1 646 258 0616';
-const SITE_PHONE_TEL = '+16462580616';
+const SITE_PHONE = '+1 646 389 3047';
+const SITE_PHONE_TEL = '+16463893047';
 const SITE_EMAIL = 'info@shakespearebookpublishinghouse.com';
 const SITE_ADDRESS = '1405 New York Ave, Huntington Station, NY 11746, United States';
 // Same wording on Home, About and Contact (search engines trust an identical description everywhere).

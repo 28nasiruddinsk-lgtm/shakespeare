@@ -177,7 +177,7 @@
             </a>
             <div class="header-contact">
                 <div><i class="fas fa-envelope"></i> <a href="mailto:info@theshakespearepublishinghouse.com">info@theshakespearepublishinghouse.com</a></div>
-                <div><i class="fas fa-phone-alt"></i> <a href="tel:+16462580616" style="font-weight:700;">+1 646 258 0616</a></div>
+                <div><i class="fas fa-phone-alt"></i> <a href="tel:+16463893047" style="font-weight:700;">+1 646 389 3047</a></div>
                 <div><i class="fas fa-clock"></i> Mon - Fri, 9 AM - 6 PM</div>
             </div>
         </div>
@@ -268,7 +268,7 @@
                 <div class="contact-block">
                     <span class="address-line">Rockefeller Plaza, 14th Floor - Suite 1405, New York, NY, 10111, United States</span>
                     <span><span class="label">Email:</span> <a href="mailto:info@theshakespearepublishinghouse.com">info@theshakespearepublishinghouse.com</a></span>
-                    <span><span class="label">Phone:</span> <a href="tel:+16462580616">+1 646 258 0616</a></span>
+                    <span><span class="label">Phone:</span> <a href="tel:+16463893047">+1 646 389 3047</a></span>
                 </div>
             </div>
 
