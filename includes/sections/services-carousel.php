@@ -8,7 +8,7 @@
     ["Children's Book Publishing", 'assets/images/Cover-Design.webp', 'Writing, custom illustration and layout for picture books, early readers and middle-grade stories.', 'childrens-book.php'],
   ];
 ?>
-<section class="services-carousel-section section-border" id="services">
+<section class="services-carousel-section services--v2 section-border" id="services">
   <div class="container">
 
     <div class="section-heading center">
@@ -24,15 +24,16 @@
       <div class="swiper services-swiper">
         <div class="swiper-wrapper">
 
-          <?php foreach ($homeServices as [$title, $img, $text, $href]): ?>
+          <?php foreach ($homeServices as $i => [$title, $img, $text, $href]): ?>
           <div class="swiper-slide">
             <div class="service-card">
+              <span class="service-num"><?= sprintf('%02d', $i + 1); ?></span>
               <div class="service-icon">
                 <img src="<?= e($img); ?>" alt="<?= e($title); ?>">
               </div>
               <h3><?= e($title); ?></h3>
               <p><?= e($text); ?></p>
-              <a href="<?= e($href); ?>">Explore Service &rarr;</a>
+              <a href="<?= e($href); ?>">Explore Service <span aria-hidden="true">&rarr;</span></a>
             </div>
           </div>
           <?php endforeach; ?>

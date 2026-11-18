@@ -88,7 +88,7 @@ include __DIR__ . '/includes/layout/header.php';
   </section>
 
   <!-- HOW IT WORKS -->
-  <section class="process-section section-border">
+  <section class="process-section process--v2 section-border">
     <div class="container">
 
       <div class="section-heading center">

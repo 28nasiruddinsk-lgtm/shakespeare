@@ -1,4 +1,4 @@
-<section class="hero section-border">
+<section class="hero hero--v2 section-border">
   <div class="container hero-grid">
     <div class="hero-copy">
       <p class="eyebrow">Premium Book Publishing Services &middot; New York</p>
@@ -9,12 +9,21 @@
         <a class="btn btn-dark js-manuscript-popup" href="#manuscript-popup">Submit Your Manuscript <span>→</span></a>
         <a class="btn btn-outline" href="contact.php">Book a Consultation</a>
       </div>
+      <ul class="hero-trust" aria-label="What every author gets">
+        <li><span aria-hidden="true">✓</span> One dedicated publishing manager</li>
+        <li><span aria-hidden="true">✓</span> Every edit tracked and approved by you</li>
+        <li><span aria-hidden="true">✓</span> Print, ebook &amp; audiobook</li>
+      </ul>
     </div>
 
     <div class="hero-art placeholder placeholder-hero">
-      <div>
+      <div class="hero-frame">
         <img src="assets/images/banner-home.webp" alt="Illustration of Shakespeare with a manuscript background" width="900" height="560">
       </div>
+      <a class="hero-float" href="#services">
+        <span class="hero-float-icon" aria-hidden="true">✒</span>
+        <span><strong>Write · Edit · Publish</strong><small>Every step under one roof</small></span>
+      </a>
     </div>
   </div>
 </section>

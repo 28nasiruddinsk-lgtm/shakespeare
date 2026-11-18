@@ -1,6 +1,6 @@
-<section class="process-section section-border" id="process">
-  <div class="container process-grid">
-    <div class="section-intro boxed-left compact">
+<section class="process-section process--v2 section-border" id="process">
+  <div class="container">
+    <div class="section-heading center">
       <p class="eyebrow gold">Our Process</p>
       <h2>How to Publish Your Book in 5 Steps</h2>
       <p>A clear, transparent process, and you approve every stage before release.</p>

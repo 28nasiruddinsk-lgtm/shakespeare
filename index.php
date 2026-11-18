@@ -11,6 +11,7 @@ include __DIR__ . '/includes/layout/header.php';
   <?php include __DIR__ . '/includes/sections/hero.php'; ?>
   <?php include __DIR__ . '/includes/sections/features.php'; ?>
   <?php include __DIR__ . '/includes/sections/services-carousel.php'; ?>
+  <?php include __DIR__ . '/includes/sections/books.php'; ?>
   <?php include __DIR__ . '/includes/sections/process.php'; ?>
 
   <section class="book-showcase-section section-border" id="books">

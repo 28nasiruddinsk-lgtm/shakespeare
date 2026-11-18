@@ -117,7 +117,7 @@ include __DIR__ . '/includes/layout/header.php';
   </section>
 
   <!-- HOW WE WORK -->
-  <section class="process-section section-border">
+  <section class="process-section process--v2 section-border">
     <div class="container">
 
       <div class="section-heading center">

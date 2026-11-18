@@ -32,13 +32,28 @@
   addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
+  // Process timeline: the line fills and the steps light up one after another once the section is in view.
+  var timelineIO = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('is-active');
+      timelineIO.unobserve(entry.target);
+    });
+  }, { threshold: 0.3 });
+  document.querySelectorAll('.process--v2').forEach(function (section) {
+    section.querySelectorAll('.process-step').forEach(function (step, i) {
+      step.style.setProperty('--step-delay', reduce ? '0ms' : i * 300 + 'ms');
+    });
+    timelineIO.observe(section);
+  });
+
   if (reduce) return;
 
   // Staggered reveal for content blocks the original script.js does not animate.
   var revealSel = [
     '.section-heading', '.overview-content', '.overview-image', '.included-card', '.why-service-card',
     '.about-work-card', '.values-list article', '.about-stats > div', '.faq-card', '.deliverables-content',
-    '.deliverables-image', '.blog-card', '.platform-badge', '.about-blurb-inner', '.cta-content', '.contact-info-panel'
+    '.deliverables-image', '.blog-card', '.platform-badge', '.books-v2-art', '.books-v2-copy', '.about-blurb-inner', '.cta-content', '.contact-info-panel'
   ].join(',');
   var io = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {

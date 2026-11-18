@@ -18,25 +18,28 @@ const ABOUT_PARAGRAPH = "Shakespeare Publishing House is a book publishing compa
 // Optional $image puts a picture beside the questions (the faq-layout used on some service pages).
 function faq_section(array $items, $heading = 'Frequently Asked Questions', $eyebrow = 'FAQ', $image = null, $imageAlt = ''){
   ?>
-  <section class="faq-section section-border">
-    <div class="container<?= $image ? ' faq-layout' : ''; ?>">
-      <?php if ($image): ?>
-      <div class="faq-image"><img src="<?= e($image); ?>" alt="<?= e($imageAlt); ?>"></div>
-      <div class="faq-content">
-      <?php endif; ?>
-      <div class="section-heading center">
+  <section class="faq-section faq--v2 section-border">
+    <div class="container faq-v2-grid">
+      <div class="faq-v2-intro">
         <p class="eyebrow gold"><?= e($eyebrow); ?></p>
         <h2><?= e($heading); ?></h2>
+        <p>Can't find your answer? Talk to our publishing team and get a straight reply.</p>
+        <div class="faq-v2-actions">
+          <a class="btn btn-dark" href="contact.php">Book a Consultation</a>
+          <a class="faq-v2-call" href="tel:<?= e(SITE_PHONE_TEL); ?>">or call <?= e(SITE_PHONE); ?></a>
+        </div>
+        <?php if ($image): ?>
+        <div class="faq-v2-image"><img src="<?= e($image); ?>" alt="<?= e($imageAlt); ?>" loading="lazy"></div>
+        <?php endif; ?>
       </div>
-      <div class="faq-grid">
-        <?php foreach ($items as [$q, $a]): ?>
+      <div class="faq-grid faq-v2-list">
+        <?php foreach ($items as $i => [$q, $a]): ?>
         <div class="faq-card">
-          <button type="button"><?= e($q); ?> <span>+</span></button>
+          <button type="button"><em class="faq-num"><?= sprintf('%02d', $i + 1); ?></em><strong class="faq-q"><?= e($q); ?></strong> <span>+</span></button>
           <p><?= e($a); ?></p>
         </div>
         <?php endforeach; ?>
       </div>
-      <?php if ($image): ?></div><?php endif; ?>
     </div>
   </section>
   <script type="application/ld+json"><?= json_encode([
