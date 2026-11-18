@@ -1,13 +1,6 @@
 ---
-# cPanel > Git Version Control > Deploy HEAD Commit copies the repo into the domain folder (document root).
-# -rlt (not -a): never copy the repo folder's permissions/group onto the live folder;
-# that made the site folder 0750 once and the server showed "Index of /" with 404s.
-# No --delete: files that are not in git (includes/mail-config.php, storage/*.csv) stay on the server.
+# cPanel > Git Version Control > Deploy HEAD Commit runs deploy.sh from the repository folder.
+# It updates every web folder on this account that already holds this site (both domains).
 deployment:
   tasks:
-    - export DEPLOYPATH=$HOME/shakespearepublishingshouse.com/
-    - /usr/bin/rsync -rlt --exclude=.git --exclude=.cpanel.yml --exclude=.gitignore ./ $DEPLOYPATH
-    # Secrets/leads are not in git (public repo): first deploy copies them from the old site copy on the server; never overwrites.
-    - OLD=$DEPLOYPATH/shakespearepublishingshouse.com; [ -f $DEPLOYPATH/includes/mail-config.php ] || /bin/cp $OLD/includes/mail-config.php $DEPLOYPATH/includes/ 2>/dev/null; [ -f $DEPLOYPATH/storage/form-submissions.csv ] || /bin/cp $OLD/storage/form-submissions.csv $DEPLOYPATH/storage/ 2>/dev/null; true
-    - /bin/chmod 755 $DEPLOYPATH
-    - /bin/rm -f $DEPLOYPATH/diag.php $DEPLOYPATH/smtp-test.php
+    - /bin/bash deploy.sh

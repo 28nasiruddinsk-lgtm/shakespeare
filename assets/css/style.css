@@ -4691,3 +4691,13 @@ label .iti .iti__search-input:focus {
 .service-page .service-hero .service-hero-grid{height:auto !important}
 .service-page .service-hero .service-hero-content{padding-top:56px;padding-bottom:56px}
 .service-page .service-hero h1{font-size:clamp(34px,3.6vw,54px);line-height:1.06}
+
+/* Smaller headings site-wide (requested 2026-11-19). Scales with the screen; phones get the low end. */
+main h1,
+.service-page .service-hero h1,
+.inner-hero h1{font-size:clamp(32px,3.4vw,50px) !important;line-height:1.08 !important}
+.hero h1{font-size:clamp(34px,3.8vw,56px) !important}
+main h2{font-size:clamp(26px,2.4vw,38px) !important;line-height:1.15 !important}
+.cta-section h2,.service-cta h2{font-size:clamp(28px,2.8vw,42px) !important}
+main h3{font-size:clamp(18px,1.4vw,22px)}
+.footer-contact-copy h2{font-size:clamp(26px,2.4vw,36px) !important}
