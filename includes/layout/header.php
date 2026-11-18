@@ -17,7 +17,7 @@
   <?php if (!empty($page_description)): ?><meta property="og:description" content="<?= e($page_description); ?>"><?php endif; ?>
   <meta property="og:url" content="<?= e($page_canonical); ?>">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="<?= e(SITE_URL . 'assets/images/logo.png'); ?>">
+  <meta property="og:image" content="<?= e(SITE_URL . 'assets/images/logo-shakespeare.png'); ?>">
   <?php if (!empty($page_noindex)): ?><meta name="robots" content="noindex, follow"><?php endif; ?>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -53,7 +53,7 @@
       'Ebook Editing Services' => 'ebook-editing.php',
       "Children's Book Publishing" => 'childrens-book.php',
     ];
-    $logo = SITE_URL . 'assets/images/logo.png';
+    $logo = SITE_URL . 'assets/images/logo-shakespeare.png';
     $schema = [
       '@context' => 'https://schema.org',
       '@graph' => [
@@ -136,7 +136,7 @@
   <header class="site-header" id="top">
     <div class="container nav-wrap">
       <a class="brand" href="index.php" aria-label="Shakespeare Publishing House">
-         <img src="assets/images/logo.png" class="brand-logo" alt="Shakespeare Publishing House">
+         <img src="assets/images/logo-shakespeare.webp" class="brand-logo" alt="Shakespeare Book Publishing House" width="600" height="404">
       </a>
 
       <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">&#9776;</button>

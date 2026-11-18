@@ -69,7 +69,7 @@
 
       <div class="footer-brand">
         <a class="brand footer-logo" href="index.php">
-          <img src="assets/images/logo-white.png" class="brand-logo" alt="Shakespeare Publishing House">
+          <img src="assets/images/logo-shakespeare-white.webp" class="brand-logo" alt="Shakespeare Book Publishing House" width="600" height="404">
         </a>
 
         <p>
