@@ -1,12 +1,22 @@
+<?php
+  $homeServices = [
+    ['Ghostwriting Services', 'assets/images/Ghostwriting.png', 'Professional book ghostwriters turn your ideas, notes and interviews into a finished manuscript written in your voice, with your name on the cover.', 'ghostwriting.php'],
+    ['Book Editing Services', 'assets/images/Editing.webp', 'Developmental editing, line editing, copyediting and proofreading for clear structure and polished prose.', 'editing.php'],
+    ['Book Publishing', 'assets/images/Book-Publishing.webp', 'Self-publishing services in paperback, hardcover, ebook and audiobook, with ISBN, formatting and distribution handled for you.', 'book-publishing.php'],
+    ['Ebook Writing Services', 'assets/images/Article-Writing.webp', 'Turn your expertise into a professionally written ebook for every major e-reader.', 'ebook-writing.php'],
+    ['Ebook Editing Services', 'assets/images/Editing.webp', 'Proofreading and digital formatting, so your ebook reads cleanly on every phone, tablet and e-reader.', 'ebook-editing.php'],
+    ["Children's Book Publishing", 'assets/images/Cover-Design.webp', 'Writing, custom illustration and layout for picture books, early readers and middle-grade stories.', 'childrens-book.php'],
+  ];
+?>
 <section class="services-carousel-section section-border" id="services">
   <div class="container">
 
     <div class="section-heading center">
       <p class="eyebrow gold">Our Services</p>
-      <h2>Every Step. Expertly Handled.</h2>
+      <h2>Book Publishing, Ghostwriting &amp; Editing Services, Every Step Handled</h2>
       <p>
-        From writing and editing to design, publishing, and marketing, we provide end-to-end
-        solutions for authors who want their book handled with care, taste, and publishing excellence.
+        From writing and editing to design, publishing and marketing, our book publishing services cover every
+        stage of the journey for authors who want their book handled with care.
       </p>
     </div>
 
@@ -14,83 +24,26 @@
       <div class="swiper services-swiper">
         <div class="swiper-wrapper">
 
+          <?php foreach ($homeServices as [$title, $img, $text, $href]): ?>
           <div class="swiper-slide">
             <div class="service-card">
               <div class="service-icon">
-                <img src="assets/images/Ghostwriting.png" alt="Ghostwriting">
+                <img src="<?= e($img); ?>" alt="<?= e($title); ?>">
               </div>
-              <h3>Ghostwriting</h3>
-              <p>Bring your ideas to life with professionally crafted writing that keeps your voice at the center.</p>
-              <a href="ghostwriting.php">Explore Service &rarr;</a>
+              <h3><?= e($title); ?></h3>
+              <p><?= e($text); ?></p>
+              <a href="<?= e($href); ?>">Explore Service &rarr;</a>
             </div>
           </div>
-
-          <div class="swiper-slide">
-            <div class="service-card">
-              <div class="service-icon">
-                <img src="assets/images/Editing.webp" alt="Editing">
-              </div>
-              <h3>Editing</h3>
-              <p>Refine your manuscript with clear structure, polished language, and professional flow.</p>
-              <a href="editing.php">Explore Service &rarr;</a>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <div class="service-card">
-              <div class="service-icon">
-                <img src="assets/images/Book-Publishing.webp" alt="Book Publishing">
-              </div>
-              <h3>Book Publishing</h3>
-              <p>Premium print and digital publishing support designed to prepare your book for readers.</p>
-              <a href="book-publishing.php">Explore Service &rarr;</a>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <div class="service-card">
-              <div class="service-icon">
-                <img src="assets/images/Article-Writing.webp" alt="Ebook Writing">
-              </div>
-              <h3>Ebook Writing</h3>
-              <p>Turn your ideas, expertise, and notes into a polished ebook written for digital readers.</p>
-              <a href="ebook-writing.php">Explore Service &rarr;</a>
-            </div>
-          </div>
-
-          <!-- Coming soon: page not available yet.
-          <div class="swiper-slide">
-            <div class="service-card">
-              <div class="service-icon">
-                <img src="assets/images/Cover-Design.webp" alt="Cover Design">
-              </div>
-              <h3>Cover Design</h3>
-              <p>Elegant, market-ready covers that make your book refined, memorable, and valuable.</p>
-              <a href="book-cover-design.php">Explore Service &rarr;</a>
-            </div>
-          </div>
-          -->
-
-          <!-- Coming soon: page not available yet.
-          <div class="swiper-slide">
-            <div class="service-card">
-              <div class="service-icon">
-                <img src="assets/images/Article-Writing.webp" alt="Article Writing">
-              </div>
-              <h3>Article Writing</h3>
-              <p>Engaging articles that showcase your expertise and attract your target audience.</p>
-              <a href="article-writing.php">Explore Service &rarr;</a>
-            </div>
-          </div>
-          -->
+          <?php endforeach; ?>
 
         </div>
       </div>
 
       <div class="services-controls">
-        <button class="services-prev" type="button">&larr;</button>
+        <button class="services-prev" type="button" aria-label="Previous service">&larr;</button>
         <div class="services-pagination"></div>
-        <button class="services-next" type="button">&rarr;</button>
+        <button class="services-next" type="button" aria-label="Next service">&rarr;</button>
       </div>
     </div>
 

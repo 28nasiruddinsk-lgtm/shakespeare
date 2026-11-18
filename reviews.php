@@ -1,6 +1,6 @@
 <?php
-$page_title = 'Customer Reviews | Shakespeare Publishing House';
-$page_description = 'Read what authors say about working with Shakespeare Publishing House on ghostwriting, editing, ebook writing, and book publishing.';
+$page_title = 'Shakespeare Publishing House Reviews';
+$page_description = 'Read verified Shakespeare Publishing House reviews from authors on independent review platforms, each linked to the original.';
 require_once __DIR__ . '/includes/helpers.php';
 include __DIR__ . '/includes/layout/header.php';
 ?>
@@ -10,9 +10,9 @@ include __DIR__ . '/includes/layout/header.php';
     <div class="container reviews-hero-grid">
       <div>
         <p class="eyebrow gold">Author Reviews</p>
-        <h1>Authors Trust Us With Their Stories.</h1>
+        <h1>Shakespeare Publishing House Reviews from Real Authors</h1>
       </div>
-      <p>From first drafts to finished books on the shelf, here is what writers say about ghostwriting, editing, ebook writing, and publishing with Shakespeare Publishing House.</p>
+      <p>From first drafts to finished books on the shelf, here's what authors say about our ghostwriting, editing, ebook writing and book publishing services. Every review is summarized from an independent review platform and linked to the original, so you can read the exact wording yourself.</p>
     </div>
   </section>
 
@@ -48,6 +48,7 @@ include __DIR__ . '/includes/layout/header.php';
         <?php endforeach; ?>
       </div>
       <p class="platforms-note">Ranked by number of reviews, most to fewest, checked live on 2026-09-28. Trustpilot is not used &mdash; we are not listed there.</p>
+      <p class="platforms-cta"><a class="btn btn-dark" href="<?= e($platforms[0]['url']); ?>" target="_blank" rel="noopener">Write a Review on <?= e($platforms[0]['name']); ?> <span>&rarr;</span></a></p>
     </div>
   </section>
 

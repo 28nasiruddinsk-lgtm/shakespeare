@@ -7,7 +7,17 @@
   <?php if (isset($page_description) && $page_description): ?>
   <meta name="description" content="<?= e($page_description); ?>">
   <?php endif; ?>
-  <?php if (!empty($page_canonical)): ?><link rel="canonical" href="<?= e($page_canonical); ?>"><?php endif; ?>
+  <?php
+    // Every page gets a canonical on the live domain (index.php = the root).
+    $script = basename($_SERVER['SCRIPT_NAME'] ?? 'index.php');
+    $page_canonical = $page_canonical ?? SITE_URL . ($script === 'index.php' ? '' : $script);
+  ?>
+  <link rel="canonical" href="<?= e($page_canonical); ?>">
+  <?php if (isset($page_title)): ?><meta property="og:title" content="<?= e($page_title); ?>"><?php endif; ?>
+  <?php if (!empty($page_description)): ?><meta property="og:description" content="<?= e($page_description); ?>"><?php endif; ?>
+  <meta property="og:url" content="<?= e($page_canonical); ?>">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="<?= e(SITE_URL . 'assets/images/logo.png'); ?>">
   <?php if (!empty($page_noindex)): ?><meta name="robots" content="noindex, follow"><?php endif; ?>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,159 +30,88 @@
   <style>.iti{display:block;width:100%}</style>
   <link rel="stylesheet" href="assets/css/style.css?v=<?= @filemtime(__DIR__ . '/../../assets/css/style.css') ?: time(); ?>">
   
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": ["Organization", "ProfessionalService"],
-      "@id": "https://shakespearepublishinghouse.com/#organization",
-      "name": "Shakespeare Publishing House",
-      "url": "https://shakespearepublishinghouse.com/",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://shakespearepublishinghouse.com/wp-content/uploads/2026/06/logo.png"
-      },
-      "image": "https://shakespearepublishinghouse.com/wp-content/uploads/2026/06/logo.png",
-      "description": "Shakespeare Publishing House helps authors, entrepreneurs, coaches, and brands turn manuscripts and ideas into polished, publication-ready books.",
-      "email": "Info@shakespearepublishinghouse.com",
-      "telephone": "+1-646-389-0212",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Rockefeller Plaza, 14th Floor - Suite 1405",
-        "addressLocality": "New York",
-        "addressRegion": "NY",
-        "postalCode": "10111",
-        "addressCountry": "US"
-      },
-      "sameAs": [
-        "https://www.instagram.com/shakespearepublishinghouse/",
-        "https://www.youtube.com/@ShakespearePublishingHouse",
-        "https://www.facebook.com/profile.php?id=61556203858800"
+  <?php
+    // Organization + LocalBusiness + WebSite schema, built from the constants in includes/helpers.php.
+    $address = [
+      '@type' => 'PostalAddress',
+      'streetAddress' => '1405 New York Ave',
+      'addressLocality' => 'Huntington Station',
+      'addressRegion' => 'NY',
+      'postalCode' => '11746',
+      'addressCountry' => 'US',
+    ];
+    $sameAs = [
+      'https://www.instagram.com/shakespearepublishinghouse/',
+      'https://www.youtube.com/@ShakespearePublishingHouse',
+      'https://www.facebook.com/profile.php?id=61556203858800',
+    ];
+    $services = [
+      'Ghostwriting Services' => 'ghostwriting.php',
+      'Book Editing Services' => 'editing.php',
+      'Book Publishing Services' => 'book-publishing.php',
+      'Ebook Writing Services' => 'ebook-writing.php',
+      'Ebook Editing Services' => 'ebook-editing.php',
+      "Children's Book Publishing" => 'childrens-book.php',
+    ];
+    $logo = SITE_URL . 'assets/images/logo.png';
+    $schema = [
+      '@context' => 'https://schema.org',
+      '@graph' => [
+        [
+          '@type' => ['Organization', 'ProfessionalService'],
+          '@id' => SITE_URL . '#organization',
+          'name' => 'Shakespeare Publishing House',
+          'url' => SITE_URL,
+          'logo' => ['@type' => 'ImageObject', 'url' => $logo],
+          'image' => $logo,
+          'description' => ABOUT_PARAGRAPH,
+          'email' => SITE_EMAIL,
+          'telephone' => SITE_PHONE_TEL,
+          'address' => $address,
+          'sameAs' => $sameAs,
+          'contactPoint' => [
+            '@type' => 'ContactPoint',
+            'telephone' => SITE_PHONE_TEL,
+            'email' => SITE_EMAIL,
+            'contactType' => 'customer support',
+            'areaServed' => 'US',
+            'availableLanguage' => ['English'],
+          ],
+        ],
+        [
+          '@type' => 'LocalBusiness',
+          '@id' => SITE_URL . '#localbusiness',
+          'name' => 'Shakespeare Publishing House',
+          'url' => SITE_URL,
+          'image' => $logo,
+          'logo' => $logo,
+          'description' => ABOUT_PARAGRAPH,
+          'telephone' => SITE_PHONE_TEL,
+          'email' => SITE_EMAIL,
+          'priceRange' => '$$',
+          'address' => $address,
+          'areaServed' => [['@type' => 'Country', 'name' => 'United States'], ['@type' => 'Place', 'name' => 'Worldwide']],
+          'hasOfferCatalog' => [
+            '@type' => 'OfferCatalog',
+            'name' => 'Publishing Services',
+            'itemListElement' => array_map(fn($name, $page) => [
+              '@type' => 'Offer',
+              'itemOffered' => ['@type' => 'Service', 'name' => $name, 'url' => SITE_URL . $page],
+            ], array_keys($services), $services),
+          ],
+          'sameAs' => $sameAs,
+        ],
+        [
+          '@type' => 'WebSite',
+          '@id' => SITE_URL . '#website',
+          'url' => SITE_URL,
+          'name' => 'Shakespeare Publishing House',
+          'publisher' => ['@id' => SITE_URL . '#organization'],
+        ],
       ],
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+1-646-258-0616",
-        "email": "Info@shakespearepublishinghouse.com",
-        "contactType": "customer support",
-        "areaServed": "US",
-        "availableLanguage": ["English"]
-      }
-    },
-    {
-      "@type": "LocalBusiness",
-      "@id": "https://shakespearepublishinghouse.com/#localbusiness",
-      "name": "Shakespeare Publishing House",
-      "url": "https://shakespearepublishinghouse.com/",
-      "image": "https://shakespearepublishinghouse.com/wp-content/uploads/2026/06/logo.png",
-      "logo": "https://shakespearepublishinghouse.com/wp-content/uploads/2026/06/logo.png",
-      "description": "Professional book publishing, ghostwriting, editing, ebook writing, book cover design, marketing, and author branding services.",
-      "telephone": "+1-646-258-0616",
-      "email": "Info@shakespearepublishinghouse.com",
-      "priceRange": "$$",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Rockefeller Plaza, 14th Floor - Suite 1405",
-        "addressLocality": "New York",
-        "addressRegion": "NY",
-        "postalCode": "10111",
-        "addressCountry": "US"
-      },
-      "areaServed": [
-        {
-          "@type": "Country",
-          "name": "United States"
-        },
-        {
-          "@type": "Place",
-          "name": "Worldwide"
-        }
-      ],
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Publishing Services",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Ghostwriting",
-              "url": "https://shakespearepublishinghouse.com/ghostwriting/"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Editing",
-              "url": "https://shakespearepublishinghouse.com/editing/"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Book Publishing",
-              "url": "https://shakespearepublishinghouse.com/book-publishing/"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Ebook Writing",
-              "url": "https://shakespearepublishinghouse.com/ebook-writing/"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Book Cover Design",
-              "url": "https://shakespearepublishinghouse.com/book-cover-design/"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Book Marketing",
-              "url": "https://shakespearepublishinghouse.com/book-marketing/"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Author Branding",
-              "url": "https://shakespearepublishinghouse.com/author-branding/"
-            }
-          }
-        ]
-      },
-      "sameAs": [
-        "https://www.instagram.com/shakespearepublishinghouse/",
-        "https://www.youtube.com/@ShakespearePublishingHouse",
-        "https://www.facebook.com/profile.php?id=61556203858800"
-      ]
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://shakespearepublishinghouse.com/#website",
-      "url": "https://shakespearepublishinghouse.com/",
-      "name": "Shakespeare Publishing House",
-      "publisher": {
-        "@id": "https://shakespearepublishinghouse.com/#organization"
-      },
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://shakespearepublishinghouse.com/?s={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    }
-  ]
-}
-</script>
+    ];
+  ?>
+  <script type="application/ld+json"><?= json_encode($schema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT); ?></script>
 
 
 <!-- Google tag (gtag.js) -->
@@ -213,6 +152,7 @@
       <a href="editing.php">Editing</a>
       <a href="book-publishing.php">Book Publishing</a>
       <a href="ebook-writing.php">Ebook Writing</a>
+      <a href="ebook-editing.php">Ebook Editing</a>
       <a href="childrens-book.php">Children&#39;s Book</a>
       <!-- Coming soon: pages not available yet.
       <a href="book-cover-design.php">Book Cover Design</a>

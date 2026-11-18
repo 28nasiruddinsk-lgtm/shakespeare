@@ -4621,3 +4621,73 @@ label .iti .iti__search-input:focus {
   background: transparent;
   padding: 8px calc(var(--iti-spacer-horizontal) + var(--iti-clear-icon-size) + var(--iti-spacer-horizontal)) 8px calc(var(--iti-spacer-horizontal) + var(--iti-globe-icon-size) + var(--iti-spacer-horizontal));
 }
+
+/* =====================================================================
+   INTERACTIVE LAYER (assets/js/interactions.js) + new content blocks
+   Motion uses only transform/opacity; prefers-reduced-motion turns it off.
+   ===================================================================== */
+.scroll-progress{position:fixed;inset:0 0 auto 0;height:3px;background:linear-gradient(90deg,var(--gold),var(--green));transform:scaleX(0);transform-origin:0 50%;z-index:9999;pointer-events:none}
+.back-to-top{position:fixed;right:24px;bottom:96px;width:44px;height:44px;border-radius:50%;border:1px solid var(--gold);background:var(--paper);color:var(--green);font-size:18px;cursor:pointer;opacity:0;translate:0 12px;pointer-events:none;transition:opacity .25s ease,translate .25s ease,background-color .2s ease;z-index:900}
+.back-to-top.is-shown{opacity:1;translate:0 0;pointer-events:auto}
+.back-to-top:hover{background:var(--green);color:#fff}
+
+/* Staggered reveal */
+.reveal{opacity:0;translate:0 22px;transition:opacity .6s ease var(--reveal-delay,0ms),translate .6s cubic-bezier(.2,.7,.2,1) var(--reveal-delay,0ms)}
+.reveal.is-in{opacity:1;translate:0 0}
+
+/* Cards: lift + gold spotlight following the cursor */
+.has-spotlight{position:relative;isolation:isolate;transition:translate .3s ease,box-shadow .3s ease,border-color .3s ease}
+.has-spotlight::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:0;transition:opacity .3s ease;background:radial-gradient(260px circle at var(--mx,50%) var(--my,50%),rgba(182,138,57,.16),transparent 65%)}
+.has-spotlight:hover{translate:0 -6px;box-shadow:0 18px 40px rgba(23,23,20,.10);border-color:rgba(182,138,57,.45)}
+.has-spotlight:hover::before{opacity:1}
+
+/* Process steps: number fills gold on hover */
+.process-step .process-icon,.process-step > span{transition:background-color .3s ease,color .3s ease,scale .3s ease}
+.process-step:hover .process-icon,.process-step:hover > span{background-color:var(--gold);color:#fff;scale:1.08}
+
+/* Buttons: light sweep on hover */
+.btn{background-image:linear-gradient(110deg,transparent 35%,rgba(255,255,255,.28) 50%,transparent 65%);background-size:250% 100%;background-position:150% 0;background-repeat:no-repeat;transition:background-position .7s ease,background-color .25s ease,color .25s ease,translate .2s ease}
+.btn:hover{background-position:-60% 0;translate:0 -2px}
+.btn:active{translate:0 0}
+
+/* FAQ: answer slides in, +/- turns */
+.faq-card{transition:border-color .25s ease,box-shadow .25s ease}
+.faq-card.is-open{border-color:rgba(182,138,57,.55);box-shadow:0 10px 28px rgba(23,23,20,.06)}
+.faq-card.is-open p{animation:faq-in .35s ease}
+.faq-card button span{display:inline-block;transition:rotate .3s ease}
+.faq-card.is-open button span{rotate:180deg}
+@keyframes faq-in{from{opacity:0;translate:0 -6px}to{opacity:1;translate:0 0}}
+
+/* Hero artwork tilt */
+.hero-art img{transition:transform .4s ease;will-change:transform}
+
+/* New content blocks */
+.hero-intro{max-width:640px;margin-top:22px;color:var(--muted);font-size:16px;line-height:1.75}
+.about-blurb{padding:56px 0;background:var(--paper)}
+.about-blurb-inner{max-width:920px;text-align:center}
+.about-blurb-inner p:last-child{font-family:var(--serif);font-size:24px;line-height:1.5;color:var(--ink)}
+.reviews-all-link{margin-top:28px}
+.review-card span a{color:var(--gold);text-decoration:underline;text-underline-offset:3px}
+.platforms-cta{margin-top:24px;text-align:center}
+.contact-hours{color:var(--muted);font-size:14px}
+.contact-map{padding:0 0 64px}
+.contact-map iframe{display:block;width:100%;height:380px;border:1px solid var(--line);filter:grayscale(.35)}
+
+@media (max-width:768px){
+  .back-to-top{right:16px;bottom:88px}
+  .about-blurb-inner p:last-child{font-size:20px}
+  .contact-map iframe{height:300px}
+}
+@media (prefers-reduced-motion:reduce){
+  .reveal{opacity:1;translate:none;transition:none}
+  .has-spotlight,.btn,.faq-card,.hero-art img{transition:none}
+  .has-spotlight:hover,.btn:hover{translate:none}
+  .faq-card.is-open p{animation:none}
+}
+
+/* Service heroes grow with the longer keyword headlines instead of clipping them (some had a fixed 420px height). */
+.service-page .service-hero{height:auto !important}
+.service-page .service-hero .container,
+.service-page .service-hero .service-hero-grid{height:auto !important}
+.service-page .service-hero .service-hero-content{padding-top:56px;padding-bottom:56px}
+.service-page .service-hero h1{font-size:clamp(34px,3.6vw,54px);line-height:1.06}

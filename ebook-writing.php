@@ -1,6 +1,6 @@
 <?php
-$page_title = 'Ebook Writing Services | Professional Ebook Writers for Hire';
-$page_description = 'Professional ebook writing services for authors, coaches, entrepreneurs, and brands — from idea development to a polished, reader-ready digital manuscript.';
+$page_title = 'Ebook Writing Services | Ebook Writers for Hire';
+$page_description = 'Ebook writing services that turn your notes, expertise or draft into a finished digital book for coaches, experts and brands.';
 
 require_once __DIR__ . '/includes/helpers.php';
 include __DIR__ . '/includes/layout/header.php';
@@ -13,24 +13,18 @@ include __DIR__ . '/includes/layout/header.php';
     <div class="container service-hero-grid">
 
       <div class="service-hero-content">
-        <h1>Ebook Writing</h1>
+        <h1>Professional Ebook Writing Services That Turn Your Ideas Into a Finished Digital Book</h1>
         <div class="gold-line"></div>
 
-        <h2 class="service-subtitle">Professional Ebook Writing That Turns Your Ideas Into a Finished Digital Book.</h2>
-
         <p>
-          An ebook should do more than fill pages. It should educate, persuade, inspire, or position you
-          as an authority — all while keeping readers engaged from the first screen to the last.
-        </p>
-
-        <p>
-          Our ebook writing service helps you turn rough ideas, notes, interviews, expertise, or existing
-          content into a polished digital manuscript written with clarity, structure, and purpose.
+          An ebook should do more than fill pages. It should teach, persuade or inspire, and it should show readers you
+          know your subject. Our ebook writing services turn rough ideas, notes, interviews or existing content into a
+          polished digital manuscript with clear structure and purpose.
         </p>
 
         <div class="hero-actions">
           <a href="#contact" class="btn btn-green">Start My Ebook</a>
-          <a href="tel:+16462580616" class="btn btn-outline">Schedule a Consultation</a>
+          <a href="contact.php" class="btn btn-outline">Book a Consultation</a>
         </div>
       </div>
 
@@ -43,17 +37,13 @@ include __DIR__ . '/includes/layout/header.php';
 
       <div class="overview-content">
         <p class="eyebrow gold">Service Overview</p>
-        <h2>From Idea to Ebook — Without the Overwhelm.</h2>
+        <h2>From Idea to Ebook, Without the Overwhelm</h2>
         <div class="gold-line"></div>
 
         <p>
-          You may know exactly what you want to say, but not how to organize it. Or you may have years of
-          experience, scattered notes, blog posts, voice recordings, or a half-written draft that needs structure.
-        </p>
-
-        <p>
-          We help develop your ebook from the ground up — clarifying the concept, building the outline,
-          writing the chapters, refining the tone, and preparing the manuscript for editing, design, and publishing.
+          You may know exactly what you want to say but not how to organize it. Or you may have years of experience,
+          scattered notes, blog posts, voice recordings or a half-written draft. Our ebook writers for hire clarify the
+          concept, build the outline, write the chapters and prepare the manuscript for editing, design and publishing.
         </p>
       </div>
 
@@ -70,11 +60,7 @@ include __DIR__ . '/includes/layout/header.php';
 
       <div class="section-heading center">
         <p class="eyebrow gold">What’s Included</p>
-        <h2>Everything Your Ebook Needs to Become a Real Manuscript.</h2>
-        <p>
-          From early concept development to a clean final manuscript, we help shape your ideas into an ebook
-          that feels focused, useful, and ready for the next stage.
-        </p>
+        <h2>What Our Ebook Writing Services Include</h2>
       </div>
 
       <div class="included-grid">
@@ -82,33 +68,26 @@ include __DIR__ . '/includes/layout/header.php';
         <div class="included-card">
           <img src="assets/images/ebook/Digital Strategy & Hook.webp" alt="Ebook concept development">
           <h3>Ebook Concept Development</h3>
-          <p>
-            We help turn your idea into a clear ebook concept with a defined reader, purpose, angle, and promise.
-          </p>
+          <p>A clear reader, purpose, angle and promise.</p>
         </div>
 
         <div class="included-card">
           <img src="assets/images/ebook/Interactive Flow & Refinement.png" alt="Research and content planning">
-          <h3>Research & Content Planning</h3>
-          <p>
-            We organize your knowledge, notes, interviews, or existing material into a structured content plan
-            that supports the reader journey.
-          </p>
+          <h3>Research &amp; Content Planning</h3>
+          <p>Your knowledge, notes and interviews organized into a logical plan.</p>
         </div>
 
         <div class="included-card">
           <img src="assets/images/ebook/Professional Formatting & Conversion.webp" alt="Ebook chapter outline">
           <h3>Chapter Outline</h3>
-          <p>
-            We create a logical chapter-by-chapter roadmap so the ebook flows naturally from introduction to conclusion.
-          </p>
+          <p>A chapter-by-chapter map approved before writing starts.</p>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- PROFESSIONAL WRITING -->
+  <!-- DRAFTING & REVISIONS -->
   <section class="service-overview section-border">
     <div class="container overview-grid">
 
@@ -117,19 +96,13 @@ include __DIR__ . '/includes/layout/header.php';
       </div>
 
       <div class="overview-content">
-        <p class="eyebrow gold">Professional Ebook Writing</p>
-        <h2>Clear, Engaging Writing Built for Digital Readers.</h2>
+        <p class="eyebrow gold">Drafting &amp; Revisions</p>
+        <h2>Clear, Engaging Writing Built for Screen Reading</h2>
         <div class="gold-line"></div>
 
         <p>
-          Our writers craft the manuscript in a clear, engaging style designed for digital readers who scan,
-          skim, and read across devices.
-        </p>
-
-        <p>
-          We write in a way that feels aligned with you, your brand, your message, and the type of reader you
-          want to reach. You’ll also have the opportunity to review drafts, give feedback, and shape the final
-          manuscript before editing and formatting.
+          Your writer drafts each chapter for readers who scan, skim and read across devices, in a voice aligned with you
+          and your brand. You review the drafts and give feedback in revision rounds before editing and formatting.
         </p>
       </div>
 
@@ -141,8 +114,8 @@ include __DIR__ . '/includes/layout/header.php';
     <div class="container">
 
       <div class="section-heading center">
-        <p class="eyebrow gold">Who This Is For</p>
-        <h2>Ebook Writing for Authors, Experts, and Brands.</h2>
+        <p class="eyebrow gold">Who It's For</p>
+        <h2>Ebook Writing for Authors, Experts and Brands</h2>
       </div>
 
       <div class="why-service-grid">
@@ -151,22 +124,16 @@ include __DIR__ . '/includes/layout/header.php';
           <div class="why-icon">
             <img src="assets/images/ebook/icons (1).png" alt="Coaches and consultants">
           </div>
-          <h3>Coaches & Consultants</h3>
-          <p>
-            Turn your framework, process, or expertise into a lead magnet, paid resource, course companion,
-            or authority-building ebook.
-          </p>
+          <h3>Ebook for Coaches &amp; Consultants</h3>
+          <p>Share your method and attract clients.</p>
         </div>
 
         <div class="why-service-card">
           <div class="why-icon">
             <img src="assets/images/ebook/icons (2).webp" alt="Entrepreneurs and business owners">
           </div>
-          <h3>Entrepreneurs & Business Owners</h3>
-          <p>
-            Transform your industry experience, brand story, or business method into a polished ebook that
-            builds trust and credibility.
-          </p>
+          <h3>Entrepreneurs &amp; Business Owners</h3>
+          <p>A lead magnet ebook or a guide that builds trust.</p>
         </div>
 
         <div class="why-service-card">
@@ -174,20 +141,15 @@ include __DIR__ . '/includes/layout/header.php';
             <img src="assets/images/ebook/icons (3).webp" alt="First-time authors">
           </div>
           <h3>First-Time Authors</h3>
-          <p>
-            Start your publishing journey with a focused digital-first book before moving into a full-length print title.
-          </p>
+          <p>A focused first book in digital form.</p>
         </div>
 
         <div class="why-service-card">
           <div class="why-icon">
             <img src="assets/images/ebook/icons (4).png" alt="Content creators and bloggers">
           </div>
-          <h3>Content Creators & Bloggers</h3>
-          <p>
-            Convert existing articles, posts, scripts, or newsletter content into a cohesive ebook that feels
-            like a finished product.
-          </p>
+          <h3>Content Creators &amp; Bloggers</h3>
+          <p>Turn existing posts into a structured ebook.</p>
         </div>
 
       </div>
@@ -199,8 +161,8 @@ include __DIR__ . '/includes/layout/header.php';
     <div class="container">
 
       <div class="section-heading center">
-        <p class="eyebrow gold">How It Works</p>
-        <h2>A Clear Process From Blank Page to Finished Draft.</h2>
+        <p class="eyebrow gold">Process</p>
+        <h2>A Clear Process from Blank Page to Finished Draft</h2>
       </div>
 
       <div class="process-line">
@@ -208,56 +170,44 @@ include __DIR__ . '/includes/layout/header.php';
         <div class="process-step">
           <div class="process-icon">01</div>
           <h3>Discovery</h3>
-          <p>
-            We learn about your goals, audience, message, and the purpose of your ebook.
-          </p>
+          <p>Your goals, your readers and the purpose of the ebook.</p>
         </div>
 
         <div class="process-step">
           <div class="process-icon">02</div>
-          <h3>Strategy & Outline</h3>
-          <p>
-            We define the ebook structure, chapter flow, key ideas, and overall direction before writing begins.
-          </p>
+          <h3>Strategy &amp; Outline</h3>
+          <p>The angle and chapter plan.</p>
         </div>
 
         <div class="process-step">
           <div class="process-icon">03</div>
           <h3>Content Gathering</h3>
-          <p>
-            You provide notes, interviews, recordings, research, existing content, or reference material.
-          </p>
+          <p>Interviews, notes and research.</p>
         </div>
 
         <div class="process-step">
           <div class="process-icon">04</div>
           <h3>Drafting</h3>
-          <p>
-            Our writers create the manuscript chapter by chapter, keeping the content clear and useful.
-          </p>
+          <p>Your writer completes the chapters.</p>
         </div>
 
         <div class="process-step">
           <div class="process-icon">05</div>
           <h3>Final Manuscript</h3>
-          <p>
-            You receive a complete ebook manuscript ready for editing, formatting, design, and publishing.
-          </p>
+          <p>A polished file, ready for <a href="ebook-editing.php">ebook editing</a>, design and publishing.</p>
         </div>
 
       </div>
     </div>
   </section>
 
-  
-
   <!-- DELIVERABLES -->
   <section class="deliverables-section section-border">
     <div class="container deliverables-grid">
 
       <div class="deliverables-content">
-        <p class="eyebrow gold">Deliverables & Service Scope</p>
-        <h2>What You Receive.</h2>
+        <p class="eyebrow gold">Deliverables &amp; Service Scope</p>
+        <h2>What You Receive</h2>
         <div class="gold-line"></div>
 
         <ul class="premium-list">
@@ -265,10 +215,8 @@ include __DIR__ . '/includes/layout/header.php';
           <li>Detailed chapter outline</li>
           <li>Professionally written ebook manuscript</li>
           <li>Voice and tone alignment</li>
-          <li>Reader-focused structure</li>
           <li>Review and revision support</li>
           <li>Clean final manuscript ready for editing and formatting</li>
-          <li>Optional guidance for ebook publishing, cover design, and distribution</li>
         </ul>
       </div>
 
@@ -279,64 +227,14 @@ include __DIR__ . '/includes/layout/header.php';
     </div>
   </section>
 
-  
-
-  <!-- FAQ -->
-  <section class="faq-section section-border">
-    <div class="container faq-layout">
-
-      <div class="faq-content">
-        <div class="section-heading center">
-          <p class="eyebrow gold">Frequently Asked Questions</p>
-        </div>
-
-        <div class="faq-grid">
-
-          <div class="faq-card">
-            <button type="button">Do I need to have a full idea before hiring an ebook writer? <span>+</span></button>
-            <p>
-              No. You can come to us with a rough idea, notes, recordings, existing content, or even just a goal.
-              We help shape the concept and build the structure before writing begins.
-            </p>
-          </div>
-
-          <div class="faq-card">
-            <button type="button">Will the ebook sound like me? <span>+</span></button>
-            <p>
-              Yes. We write with your voice, audience, and brand in mind. The goal is not to make the ebook sound
-              generic — it should feel aligned with you and your message.
-            </p>
-          </div>
-
-          <div class="faq-card">
-            <button type="button">Can you turn my blog posts or content into an ebook? <span>+</span></button>
-            <p>
-              Yes. We can take existing content and restructure it into a cohesive ebook that reads like a complete
-              digital product, not a collection of copied posts.
-            </p>
-          </div>
-
-          <div class="faq-card">
-            <button type="button">How long should my ebook be? <span>+</span></button>
-            <p>
-              It depends on the purpose. Lead magnets may be short and focused, while business or educational ebooks
-              may be longer. We help determine the right length based on your audience and goals.
-            </p>
-          </div>
-
-          <div class="faq-card">
-            <button type="button">How long does ebook writing take? <span>+</span></button>
-            <p>
-              Timeline depends on the length, research required, and how much material you already have. Short ebooks
-              may take a few weeks, while longer or research-heavy projects take more time.
-            </p>
-          </div>
-
-        </div>
-      </div>
-
-    </div>
-  </section>
+  <?php
+    faq_section([
+      ['What is an ebook writing service?', 'An ebook writing service plans, researches and writes a digital book for you, based on your expertise and ideas. It is published under your name.'],
+      ['How long should an ebook be?', 'Most lead magnet ebooks run 5,000 to 15,000 words. Full-length nonfiction ebooks usually run 25,000 to 50,000 words. We recommend a length based on your goal.'],
+      ['Can you turn my blog posts or course into an ebook?', 'Yes. We restructure existing content into a focused ebook with a clear flow, and write new material to fill any gaps.'],
+      ['Do you also format and publish the ebook?', 'Yes. After writing, our book publishing services cover ebook formatting, cover design and distribution.'],
+    ], 'Ebook Writing FAQ', 'Frequently Asked Questions');
+  ?>
 
   <!-- CTA -->
   <section class="service-cta section-border">
@@ -346,14 +244,11 @@ include __DIR__ . '/includes/layout/header.php';
         <h2>Your Ebook Idea Deserves to Become <em>Something Real.</em></h2>
         <div class="gold-line"></div>
 
-        <p>
-          You bring the knowledge, message, or story. We’ll help turn it into a clear, professional ebook your
-          readers can trust, finish, and remember.
-        </p>
+        <p>You bring the knowledge, message or story. We'll turn it into a clear, professional ebook your readers can trust.</p>
 
         <div class="hero-actions">
           <a href="#contact" class="btn btn-green">Start My Ebook</a>
-          <a href="tel:+16462580616" class="btn btn-outline">Schedule a Consultation</a>
+          <a href="contact.php" class="btn btn-outline">Book a Consultation</a>
         </div>
       </div>
 
@@ -362,71 +257,6 @@ include __DIR__ . '/includes/layout/header.php';
 
 </main>
 
-<!-- FAQPage Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Do I need to have a full idea before hiring an ebook writer?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. You can come to us with a rough idea, notes, recordings, existing content, or even just a goal. We help shape the concept and build the structure before writing begins."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Will the ebook sound like me?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. We write with your voice, audience, and brand in mind. The goal is not to make the ebook sound generic — it should feel aligned with you and your message."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can you turn my blog posts or content into an ebook?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. We can take existing content and restructure it into a cohesive ebook that reads like a complete digital product, not a collection of copied posts."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How long should my ebook be?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "It depends on the purpose. Lead magnets may be short and focused, while business or educational ebooks may be longer. We help determine the right length based on your audience and goals."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How long does ebook writing take?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Timeline depends on the length, research required, and how much material you already have. Short ebooks may take a few weeks, while longer or research-heavy projects take more time."
-      }
-    }
-  ]
-}
-</script>
-
-<!-- Service Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "Ebook Writing Services",
-  "serviceType": "Ebook Writing",
-  "provider": {
-    "@type": "Organization",
-    "name": "Shakespeare Publishing House",
-    "url": "https://shakespearepublishinghouse.com/"
-  },
-  "areaServed": "Worldwide",
-  "description": "Professional ebook writing services for authors, coaches, entrepreneurs, and brands — from idea development to a polished, reader-ready digital manuscript."
-}
-</script>
+<?php service_schema('Ebook Writing Services', $page_description, 'ebook-writing.php'); ?>
 
 <?php include __DIR__ . '/includes/layout/footer.php'; ?>

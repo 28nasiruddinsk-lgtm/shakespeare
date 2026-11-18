@@ -1,6 +1,6 @@
 <?php
-$page_title = 'Ghostwriting Services | Professional Book Ghostwriters';
-$page_description = 'Professional ghostwriting services that turn your ideas, experience, and expertise into a published book — written with authenticity, full confidentiality.';
+$page_title = 'Ghostwriting Services | Hire a Book Ghostwriter';
+$page_description = 'Professional ghostwriting services for memoirs, business books and fiction. Your voice, your name on the cover, full confidentiality.';
 
 require_once __DIR__ . '/includes/helpers.php';
 include __DIR__ . '/includes/layout/header.php';
@@ -13,29 +13,19 @@ include __DIR__ . '/includes/layout/header.php';
     <div class="container service-hero-grid">
 
       <div class="service-hero-content">
-        <!-- <div class="breadcrumb">
-          <a href="index.php">Home</a>
-          <span>/</span>
-          <a href="index.php#services">Services</a>
-          <span>/</span>
-          <strong>Ghostwriting</strong>
-        </div> -->
-
-        <h1>Ghostwriting</h1>
+        <h1>Professional Ghostwriting Services for Your Book</h1>
         <div class="gold-line"></div>
 
         <p>
-          Professional ghostwriting that transforms your ideas, experiences, and expertise into compelling books —
-          written with authenticity, crafted with excellence, and delivered with complete confidentiality.
+          Our ghostwriting services turn your ideas, experiences and expertise into a finished book, written in your
+          voice and published under your name. Every project is confidential, and you approve each chapter before it moves forward.
         </p>
 
         <div class="hero-actions">
-          <a href="#manuscript-popup" class="btn btn-green js-manuscript-popup">Submit Manuscript</a>
-          <a href="tel:+16462580616" class="btn btn-outline">Schedule a Consultation</a>
+          <a href="#manuscript-popup" class="btn btn-green js-manuscript-popup">Hire a Ghostwriter</a>
+          <a href="contact.php" class="btn btn-outline">Book a Consultation</a>
         </div>
       </div>
-
-      
 
     </div>
   </section>
@@ -46,13 +36,12 @@ include __DIR__ . '/includes/layout/header.php';
 
       <div class="overview-content">
         <p class="eyebrow gold">Service Overview</p>
-        <h2>Bring Your Ideas to Life.</h2>
+        <h2>You Have the Story. Our Book Ghostwriters Bring the Craft.</h2>
         <div class="gold-line"></div>
 
         <p>
-          You have the knowledge. The story. The message. Our ghostwriters bring the craft.
-          We collaborate with you to understand your vision, capture your voice, and write a book
-          that reflects your expertise and purpose — seamlessly and confidentially.
+          You have the knowledge, the story and the message. Our book ghostwriters interview you, study your voice
+          and write chapter by chapter, so the finished book sounds like you on your best day.
         </p>
       </div>
 
@@ -69,35 +58,27 @@ include __DIR__ . '/includes/layout/header.php';
 
     <div class="section-heading center">
       <p class="eyebrow gold">What’s Included</p>
+      <h2>What Our Ghostwriting Services Include</h2>
     </div>
 
     <div class="included-grid">
 
       <div class="included-card">
         <img src="assets/images/Ghostwriting/Ghostwriting-Process.webp" alt="Book concept and chapter structure">
-        <h3>Concept & Structure</h3>
-        <p>
-          We refine your idea into a powerful book concept, then create a clear chapter roadmap
-          that gives your manuscript flow, clarity, and reader engagement.
-        </p>
+        <h3>Concept &amp; Structure</h3>
+        <p>We sharpen your idea into a clear book concept and a chapter-by-chapter outline.</p>
       </div>
 
       <div class="included-card">
         <img src="assets/images/Ghostwriting/Collaborative-Drafting.webp" alt="Voice capture and manuscript writing">
-        <h3>Voice & Manuscript Writing</h3>
-        <p>
-          We capture your tone, experiences, and perspective, then craft compelling,
-          well-researched content chapter by chapter.
-        </p>
+        <h3>Voice &amp; Manuscript Writing</h3>
+        <p>Interviews, research and drafting that capture your tone and perspective.</p>
       </div>
 
       <div class="included-card">
         <img src="assets/images/Ghostwriting/final.png" alt="Editorial collaboration">
         <h3>Editorial Collaboration</h3>
-        <p>
-          We work closely with you through feedback, revisions, developmental editing,
-          line editing, and final polish.
-        </p>
+        <p>Revision rounds, developmental editing, line editing and a final polish.</p>
       </div>
 
     </div>
@@ -105,12 +86,43 @@ include __DIR__ . '/includes/layout/header.php';
   </div>
 </section>
 
+  <!-- BOOKS WE GHOSTWRITE -->
+  <section class="why-service-section section-border">
+    <div class="container">
+
+      <div class="section-heading center">
+        <p class="eyebrow gold">Books We Ghostwrite</p>
+        <h2>Ghostwriting for Every Kind of Book</h2>
+      </div>
+
+      <div class="why-service-grid">
+        <div class="why-service-card">
+          <h3>Memoir Ghostwriter</h3>
+          <p>Life stories, family histories and personal journeys.</p>
+        </div>
+        <div class="why-service-card">
+          <h3>Business Book Ghostwriting</h3>
+          <p>Thought-leadership books for founders, coaches and consultants.</p>
+        </div>
+        <div class="why-service-card">
+          <h3>Fiction Ghostwriting</h3>
+          <p>Novels in romance, mystery, thriller, fantasy and literary fiction.</p>
+        </div>
+        <div class="why-service-card">
+          <h3>Self-Help &amp; Faith-Based Books</h3>
+          <p>Clear, practical books that guide readers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- HOW WE WORK -->
   <section class="process-section section-border">
     <div class="container">
 
       <div class="section-heading center">
         <p class="eyebrow gold">How We Work</p>
+        <h2>How Our Ghostwriting Process Works</h2>
       </div>
 
       <div class="process-line">
@@ -118,31 +130,31 @@ include __DIR__ . '/includes/layout/header.php';
         <div class="process-step">
           <div class="process-icon">01</div>
           <h3>Discovery</h3>
-          <p>We get to know you, your goals, and your story in depth.</p>
+          <p>We get to know you, your goals and your story in depth.</p>
         </div>
 
         <div class="process-step">
           <div class="process-icon">02</div>
           <h3>Strategy</h3>
-          <p>We develop a custom plan, outline, and voice framework.</p>
+          <p>We build an outline and a voice guide for your book.</p>
         </div>
 
         <div class="process-step">
           <div class="process-icon">03</div>
           <h3>Drafting</h3>
-          <p>Our writers bring the manuscript to life chapter by chapter.</p>
+          <p>Your ghostwriter writes the manuscript chapter by chapter.</p>
         </div>
 
         <div class="process-step">
           <div class="process-icon">04</div>
           <h3>Refinement</h3>
-          <p>We revise, strengthen, and refine with your feedback.</p>
+          <p>We revise with your feedback until every chapter is right.</p>
         </div>
 
         <div class="process-step">
           <div class="process-icon">05</div>
           <h3>Final Manuscript</h3>
-          <p>You receive a polished, professional manuscript ready for publishing.</p>
+          <p>You receive a polished manuscript, ready for editing, design and publishing.</p>
         </div>
 
       </div>
@@ -154,7 +166,7 @@ include __DIR__ . '/includes/layout/header.php';
     <div class="container">
 
       <div class="section-heading center">
-        <p class="eyebrow gold">Why Choose Our Ghostwriting Service</p>
+        <p class="eyebrow gold">Why Choose Our Ghostwriting Services</p>
       </div>
 
       <div class="why-service-grid">
@@ -164,7 +176,7 @@ include __DIR__ . '/includes/layout/header.php';
             <img src="assets/images/Ghostwriting/why-3.webp" alt="Confidential partnership">
           </div>
           <h3>Confidential Partnership</h3>
-          <p>Your privacy is our priority. Every project is protected by strict confidentiality.</p>
+          <p>Your ghostwriter is never credited. You are the only author named on the book.</p>
         </div>
 
         <div class="why-service-card">
@@ -172,7 +184,7 @@ include __DIR__ . '/includes/layout/header.php';
             <img src="assets/images/Ghostwriting/why-4.webp" alt="Experienced writers">
           </div>
           <h3>Experienced Writers</h3>
-          <p>Our team includes expert ghostwriters with deep industry and storytelling experience.</p>
+          <p>Each writer is matched to your genre.</p>
         </div>
 
         <div class="why-service-card">
@@ -180,15 +192,15 @@ include __DIR__ . '/includes/layout/header.php';
             <img src="assets/images/Ghostwriting/why-1.webp" alt="Author-centered process">
           </div>
           <h3>Author-Centered Process</h3>
-          <p>Your voice, your vision, your story — always at the center of everything we write.</p>
+          <p>You approve the outline and every chapter.</p>
         </div>
 
         <div class="why-service-card">
           <div class="why-icon">
-            <img src="assets/images/Ghostwriting/why-2.webp" alt="Market-ready result">
+            <img src="assets/images/Ghostwriting/why-2.webp" alt="Publishing-ready result">
           </div>
-          <h3>Market-Ready Result</h3>
-          <p>We deliver manuscripts crafted to engage readers and succeed in today’s publishing landscape.</p>
+          <h3>Publishing-Ready Result</h3>
+          <p>Your manuscript can go straight into our <a href="book-publishing.php">book publishing services</a>.</p>
         </div>
 
       </div>
@@ -200,7 +212,7 @@ include __DIR__ . '/includes/layout/header.php';
     <div class="container deliverables-grid">
 
       <div class="deliverables-content">
-        <p class="eyebrow gold">Deliverables & Service Scope</p>
+        <p class="eyebrow gold">Deliverables &amp; Service Scope</p>
 
         <ul class="premium-list">
           <li>In-depth discovery interviews and research</li>
@@ -220,49 +232,14 @@ include __DIR__ . '/includes/layout/header.php';
     </div>
   </section>
 
-  <!-- FAQ -->
-  <section class="faq-section section-border">
-    <div class="container">
-
-      <div class="section-heading center">
-        <p class="eyebrow gold">Frequently Asked Questions</p>
-      </div>
-
-      <div class="faq-grid">
-
-        <div class="faq-card">
-          <button type="button">What is ghostwriting? <span>+</span></button>
-          <p>
-            Ghostwriting is a collaborative process where professional writers create a book based on your ideas,
-            experiences, and expertise — in your voice and name.
-          </p>
-        </div>
-
-        <div class="faq-card">
-          <button type="button">Will the book be written in my name? <span>+</span></button>
-          <p>
-            Yes. You receive full authorship credit. Our role is to help shape, write, and polish your manuscript professionally.
-          </p>
-        </div>
-
-        <div class="faq-card">
-          <button type="button">How involved do I need to be? <span>+</span></button>
-          <p>
-            As much or as little as you prefer. We usually begin with interviews and then work through approvals,
-            drafts, and refinements.
-          </p>
-        </div>
-
-        <div class="faq-card">
-          <button type="button">How long does it take? <span>+</span></button>
-          <p>
-            Timelines vary by project, but most manuscripts are completed within 3–6 months depending on length and complexity.
-          </p>
-        </div>
-
-      </div>
-    </div>
-  </section>
+  <?php
+    faq_section([
+      ['What does a ghostwriter do?', "A ghostwriter writes your book from your interviews, notes and ideas, in your voice. You are the credited author, and the ghostwriter's name doesn't appear on the book."],
+      ['Will people know I used a ghostwriter?', 'No. Every project is confidential, and you are the only author named on the book.'],
+      ['How much do ghostwriting services cost?', 'The price depends on the length of the book, the genre and the amount of research it needs. You receive a written quote after the discovery call.'],
+      ['How long does it take to ghostwrite a book?', 'Most of the time depends on the length of the book and how quickly you review drafts. We agree a schedule with you before writing starts.'],
+    ], 'Ghostwriting FAQ', 'Frequently Asked Questions');
+  ?>
 
   <!-- CTA -->
   <section class="service-cta">
@@ -276,13 +253,11 @@ include __DIR__ . '/includes/layout/header.php';
         <h2>Your Story Deserves to Be Told <em>Beautifully.</em></h2>
         <div class="gold-line"></div>
 
-        <p>
-          Let our writers help you create a legacy that inspires, informs, and lasts for generations.
-        </p>
+        <p>Tell us about your idea and we will match you with a ghostwriter for your genre.</p>
 
         <div class="hero-actions">
-          <a href="#manuscript-popup" class="btn btn-green js-manuscript-popup">Submit Manuscript</a>
-          <a href="tel:+16462580616" class="btn btn-outline">Schedule Consultation</a>
+          <a href="#manuscript-popup" class="btn btn-green js-manuscript-popup">Hire a Ghostwriter</a>
+          <a href="contact.php" class="btn btn-outline">Book a Consultation</a>
         </div>
       </div>
 
@@ -291,63 +266,6 @@ include __DIR__ . '/includes/layout/header.php';
 
 </main>
 
-<!-- FAQPage Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is ghostwriting?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Ghostwriting is a collaborative process where professional writers create a book based on your ideas, experiences, and expertise — in your voice and name."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Will the book be written in my name?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. You receive full authorship credit. Our role is to help shape, write, and polish your manuscript professionally."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How involved do I need to be?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "As much or as little as you prefer. We usually begin with interviews and then work through approvals, drafts, and refinements."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How long does it take?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Timelines vary by project, but most manuscripts are completed within 3–6 months depending on length and complexity."
-      }
-    }
-  ]
-}
-</script>
-
-<!-- Service Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "Ghostwriting Services",
-  "serviceType": "Ghostwriting",
-  "provider": {
-    "@type": "Organization",
-    "name": "Shakespeare Publishing House",
-    "url": "https://shakespearepublishinghouse.com/"
-  },
-  "areaServed": "Worldwide",
-  "description": "Professional ghostwriting services that turn your ideas, experience, and expertise into a published book — written with authenticity and full confidentiality."
-}
-</script>
+<?php service_schema('Ghostwriting Services', $page_description, 'ghostwriting.php'); ?>
 
 <?php include __DIR__ . '/includes/layout/footer.php'; ?>

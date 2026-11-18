@@ -2,28 +2,28 @@
   <div class="container about-story-grid">
     <div class="about-story-copy">
       <p class="eyebrow gold">Our Story</p>
-      <h2>Built on a love for stories.<br><em>Driven by purpose.</em></h2>
+      <h2>Built on a Love for Stories.<br><em>Driven by Purpose.</em></h2>
       <span class="ornament-line"></span>
 
-      <p><strong>Shakespeare Publishing House</strong> was founded on a simple belief: every powerful idea deserves to be read, remembered, and cherished.</p>
-      <p>We partner with authors, thought leaders, and visionaries to craft beautifully written, expertly published books that stand the test of time.</p>
-      <p>From the first word to the final print, we bring together artistry, craftsmanship, and strategy, honoring your voice while elevating your story to its highest potential.</p>
+      <p><strong>Shakespeare Publishing House</strong> was founded on a simple belief: every powerful idea deserves to be read, remembered and cherished. As a book publishing company in NYC, we partner with authors, thought leaders and first-time writers to write, edit, design and publish books built to last.</p>
+      <p>From the first word to the final print, we bring together craft and strategy. We honor your voice while taking your story to its highest potential.</p>
 
+      <!-- Promises we can stand behind (no unverifiable figures, per Google Ads policy). -->
       <div class="about-stats">
         <div>
-          <span>15</span>
-          <strong>15+</strong>
-          <small>Years of Publishing<br>Excellence</small>
+          <span>1</span>
+          <strong>One</strong>
+          <small>Dedicated publishing<br>manager per book</small>
         </div>
         <div>
-          <span>1k</span>
-          <strong>1,000+</strong>
-          <small>Books Brought<br>to Life</small>
+          <span>✓</span>
+          <strong>Every</strong>
+          <small>Edit tracked and<br>approved by you</small>
         </div>
         <div>
-          <span>30</span>
-          <strong>Global</strong>
-          <small>Authors in 30+<br>Countries</small>
+          <span>3</span>
+          <strong>3 formats</strong>
+          <small>Print, ebook<br>and audiobook</small>
         </div>
       </div>
     </div>

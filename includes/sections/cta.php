@@ -1,11 +1,16 @@
+<?php
+  // Pages may set $cta_title / $cta_text before including this section.
+  $cta_title = $cta_title ?? 'Your Story Deserves<br>the World.';
+  $cta_text = $cta_text ?? 'Tell us about your manuscript or idea, and our publishing team will recommend the right next step.';
+?>
 <section class="cta-section section-border" id="story-cta">
   <div class="container cta-grid home-cta-grid">
     <div class="cta-copy">
-      <h2>Your Story Deserves<br>the World.</h2>
-      <p>Let&rsquo;s craft a book that inspires generations.</p>
+      <h2><?= $cta_title; ?></h2>
+      <p><?= e($cta_text); ?></p>
       <div class="hero-actions">
-        <a class="btn btn-dark js-manuscript-popup" href="#manuscript-popup">Submit Manuscript <span>&rarr;</span></a>
-        <a class="btn btn-outline" href="tel:+16462580616">Schedule a Consultation</a>
+        <a class="btn btn-dark js-manuscript-popup" href="#manuscript-popup">Submit Your Manuscript <span>&rarr;</span></a>
+        <a class="btn btn-outline" href="contact.php">Book a Consultation</a>
       </div>
     </div>
 

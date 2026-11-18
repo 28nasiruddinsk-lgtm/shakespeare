@@ -7,13 +7,13 @@
         <div class="gold-line"></div>
 
         <p>
-          Shakespeare Publishing House helps authors, entrepreneurs, coaches, and brands turn manuscripts and ideas into polished, publication-ready books. Share your project details and our team will recommend the right path for writing, editing, ebook development, book publishing, and global distribution.
+          Tell us about your manuscript or idea, and our publishing team will recommend the right next step for writing, editing, ebook development, book publishing and distribution.
         </p>
 
         <div class="contact-detail-list" aria-label="Contact details">
-          <a href="mailto:Info@shakespearepublishinghouse.com">Info@shakespearepublishinghouse.com</a>
-          <a href="tel:+16463890212">+1 646 389 0212</a>
-          <address>Rockefeller Plaza, 14th Floor - Suite 1405, New York, NY, 10111, United States</address>
+          <a href="mailto:<?= e(SITE_EMAIL); ?>"><?= e(SITE_EMAIL); ?></a>
+          <a href="tel:<?= e(SITE_PHONE_TEL); ?>"><?= e(SITE_PHONE); ?></a>
+          <address><?= e(SITE_ADDRESS); ?></address>
         </div>
       </div>
 
@@ -46,6 +46,8 @@
               <option>Ghostwriting</option>
               <option>Editing</option>
               <option>Ebook Writing</option>
+              <option>Ebook Editing</option>
+              <option>Children's Book</option>
             </select>
           </label>
         </div>
@@ -269,6 +271,7 @@
   <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@29.5.10/dist/js/intlTelInputWithUtils.min.js"></script>
   <script src="assets/js/phone-input.js?v=<?= @filemtime(__DIR__ . '/../../assets/js/phone-input.js') ?: time(); ?>"></script>
   <script src="assets/js/script.js?v=<?= @filemtime(__DIR__ . '/../../assets/js/script.js') ?: time(); ?>"></script>
+  <script src="assets/js/interactions.js?v=<?= @filemtime(__DIR__ . '/../../assets/js/interactions.js') ?: time(); ?>"></script>
 
 </body>
 </html>

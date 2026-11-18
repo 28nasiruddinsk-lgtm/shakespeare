@@ -2,9 +2,9 @@
   <div class="container about-values-grid">
     <div class="values-intro">
       <p class="eyebrow gold">Our Commitment</p>
-      <h2>Guided by values.<br><em>Focused on you.</em></h2>
+      <h2>Guided by Values.<br><em>Focused on You.</em></h2>
       <span class="ornament-line"></span>
-      <p>We hold ourselves to the highest standards in everything we do because your story deserves nothing less.</p>
+      <p>We hold ourselves to a high standard in everything we do, because your story deserves nothing less.</p>
       <figure class="about-values-image">
         <img src="assets/images/About%20us/about-image-3.webp" alt="Published books prepared for readers and authors">
       </figure>
@@ -14,22 +14,22 @@
       <article>
         <span>01</span>
         <h3>Integrity</h3>
-        <p>Honest guidance and transparent partnership every step of the way.</p>
+        <p>Clear quotes, clear contracts and honest feedback on your manuscript.</p>
       </article>
       <article>
         <span>02</span>
         <h3>Excellence</h3>
-        <p>Meticulous attention to detail and a pursuit of perfection.</p>
+        <p>Every book goes through professional editing and quality review before release.</p>
       </article>
       <article>
         <span>03</span>
         <h3>Respect</h3>
-        <p>Your voice, your vision, and your story are always our priority.</p>
+        <p>Your voice, your vision and your ownership come first.</p>
       </article>
       <article>
         <span>04</span>
         <h3>Legacy</h3>
-        <p>We build books that inspire today and endure for generations.</p>
+        <p>We design and publish books meant to be read for years, not weeks.</p>
       </article>
     </div>
   </div>

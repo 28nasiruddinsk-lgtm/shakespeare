@@ -1,51 +1,45 @@
+<?php
+  // Only real reviews, each linked to the original on its platform (same data as reviews.php).
+  // One review from each platform, so the strip shows the spread of independent sites.
+  $homeReviews = [];
+  foreach (require __DIR__ . '/../data/real-reviews.php' as $r) {
+    if (!isset($homeReviews[$r[1]])) $homeReviews[$r[1]] = $r;
+  }
+?>
 <section class="reviews-section section-border" id="reviews">
   <div class="container reviews-grid">
 
     <!-- LEFT: Reviews Carousel -->
     <div class="reviews-left">
-      <p class="eyebrow gold">Trusted By Writers.</p>
-      <h2>Proven by Results.</h2>
+      <p class="eyebrow gold">Author Reviews</p>
+      <h2>Trusted by Authors on Independent Review Sites</h2>
 
       <div class="reviews-carousel-wrap">
         <div class="swiper reviews-swiper">
           <div class="swiper-wrapper">
 
+            <?php foreach ($homeReviews as [$name, $key, $platform, $link, $date, $text]): ?>
             <div class="swiper-slide">
               <div class="review-card">
                 <div class="stars">★★★★★</div>
-                <p>“Shakespeare Publishing House brought my vision to life with such care and precision.”</p>
-                <h4>Charlotte Reeves</h4>
-                <span>Author of The Forgotten Garden</span>
+                <p>“<?= e($text); ?>”</p>
+                <h4><?= e($name); ?></h4>
+                <span>Review on <a href="<?= e($link); ?>" target="_blank" rel="noopener"><?= e($platform); ?></a><?php if (!preg_match('/\bago\b/i', $date)): // "11 hours ago" was relative to when it was collected ?> &middot; <?= e($date); ?><?php endif; ?></span>
               </div>
             </div>
-
-            <div class="swiper-slide">
-              <div class="review-card">
-                <div class="stars">★★★★★</div>
-                <p>“Their editing, design, and marketing team exceeded every expectation.”</p>
-                <h4>Michael Harper</h4>
-                <span>Author of Edge of Existence</span>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="review-card">
-                <div class="stars">★★★★★</div>
-                <p>“Professional, passionate, and always in my corner. I could not have asked for a better publishing partner.”</p>
-                <h4>Sophia Langley</h4>
-                <span>Author of Letters to the Distant</span>
-              </div>
-            </div>
+            <?php endforeach; ?>
 
           </div>
         </div>
 
         <div class="reviews-controls">
-          <button class="reviews-prev" type="button">←</button>
+          <button class="reviews-prev" type="button" aria-label="Previous review">←</button>
           <div class="reviews-pagination"></div>
-          <button class="reviews-next" type="button">→</button>
+          <button class="reviews-next" type="button" aria-label="Next review">→</button>
         </div>
       </div>
+
+      <a class="btn btn-outline reviews-all-link" href="reviews.php">Read All Reviews <span>→</span></a>
     </div>
 
     <!-- RIGHT: Image -->

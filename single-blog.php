@@ -16,8 +16,17 @@ if (!$post) {
   ];
 }
 
-$page_title = $post['title'] . ' | Shakespeare Publishing House';
+// SEO title tags from the content plan; the on-page heading keeps the post's own title.
+$seoTitles = [
+  'complete-guide-to-publishing-a-successful-book' => 'How to Publish a Book: A Step-by-Step Guide for Authors',
+  'how-to-prepare-your-manuscript' => 'Manuscript Preparation Checklist Before You Publish',
+  'ebook-writing-for-authority' => 'Why Experts Should Write an Ebook (and How to Start)',
+  'editing-before-publishing' => 'Why Book Editing Must Come Before Publishing',
+];
+$page_title = $seoTitles[$slug] ?? $post['title'] . ' | Shakespeare Publishing House';
 $page_description = $post['excerpt'];
+// Each post is its own page, so the canonical keeps the slug.
+$page_canonical = SITE_URL . 'single-blog.php?slug=' . rawurlencode($slug);
 include __DIR__ . '/includes/layout/header.php';
 ?>
 

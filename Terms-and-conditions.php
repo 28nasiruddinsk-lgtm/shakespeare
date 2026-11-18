@@ -309,8 +309,8 @@
     <div class="contact-section">
         <div class="company-name">Shakespeare Publishing House</div>
         <div class="contact-block">
-            <span class="address-line">Rockefeller Plaza, 14th Floor - Suite 1405, New York, NY, 10111, United States</span>
-            <span><span class="label">Email:</span> <a href="mailto:info@shakespearepublishinghouse.com">info@shakespearepublishinghouse.com</a></span>
+            <span class="address-line">1405 New York Ave, Huntington Station, NY 11746, United States</span>
+            <span><span class="label">Email:</span> <a href="mailto:info@shakespearebookpublishinghouse.com">info@shakespearebookpublishinghouse.com</a></span>
             <span><span class="label">Phone:</span> <a href="tel:+16462580616">+1 646 258 0616</a></span>
         </div>
     </div>

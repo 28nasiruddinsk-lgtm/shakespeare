@@ -1,6 +1,6 @@
 <?php
-$page_title = 'Blog | Shakespeare Publishing House';
-$page_description = 'Publishing, writing, editing, and author guidance from Shakespeare Publishing House.';
+$page_title = 'Book Publishing Tips & Author Guides';
+$page_description = 'Book publishing tips, manuscript checklists and editing guides for first-time and experienced authors.';
 require_once __DIR__ . '/includes/helpers.php';
 $blogs = require __DIR__ . '/includes/data/blogs.php';
 include __DIR__ . '/includes/layout/header.php';
@@ -11,9 +11,9 @@ include __DIR__ . '/includes/layout/header.php';
     <div class="container blog-hero-grid">
       <div>
         <p class="eyebrow gold">Author Resources</p>
-        <h1>Publishing Insights for Serious Authors.</h1>
+        <h1>Book Publishing Tips and Guides for Serious Authors</h1>
       </div>
-      <p>Explore practical guidance on book publishing, ebook writing, editing, and building a professional author presence.</p>
+      <p>Practical guidance on how to publish a book, editing, ebook writing and building an author presence, from the Shakespeare Publishing House editorial team.</p>
     </div>
   </section>
 
