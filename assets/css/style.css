@@ -4846,3 +4846,19 @@ main h3{font-size:clamp(18px,1.4vw,22px)}
 @media (prefers-reduced-motion:reduce){
   .books-v2-art img,.books-v2-shelf,.books-v2-genres li{transition:none}
 }
+
+/* Calmer finish (2026-11-19): fewer effects, plainer details. Overrides the rules above. */
+.hero--v2 .eyebrow{display:block;padding:0;border:0;border-radius:0;background:none;font-size:13px;margin-bottom:20px}
+.hero--v2 .eyebrow::before{content:none}
+.hero-trust li::before{content:"—";margin-right:8px;color:var(--gold)}
+.hero--v2 .hero-art::before{background:none}
+.hero-art img{transition:none;will-change:auto}
+.btn{background-image:none}
+.btn:hover{translate:none}
+.services--v2 .service-card a span{transition:none}
+.services--v2 .service-card a:hover span{translate:none}
+.included-card,.why-service-card,.about-work-card,.blog-card,.values-list article{transition:box-shadow .25s ease,border-color .25s ease}
+.included-card:hover,.why-service-card:hover,.about-work-card:hover,.blog-card:hover{box-shadow:0 12px 28px rgba(23,23,20,.08);border-color:rgba(182,138,57,.4)}
+.books-v2-art:hover .books-v2-main img{scale:1}
+.books-v2-art:hover .books-v2-shelf{translate:none}
+.books-v2-genres li:hover{translate:none}

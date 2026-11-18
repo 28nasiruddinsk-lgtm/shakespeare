@@ -8,10 +8,6 @@
       <figure class="books-v2-shelf">
         <img src="assets/images/featured-books-shelf.jpg" alt="Shelf of classic leather-bound books" width="1200" height="896" loading="lazy">
       </figure>
-      <div class="books-v2-badge">
-        <strong>Print · Ebook · Audio</strong>
-        <span>Every format, one team</span>
-      </div>
     </div>
 
     <div class="books-v2-copy">

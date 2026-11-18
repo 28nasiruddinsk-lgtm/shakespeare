@@ -27,7 +27,6 @@
           <?php foreach ($homeServices as $i => [$title, $img, $text, $href]): ?>
           <div class="swiper-slide">
             <div class="service-card">
-              <span class="service-num"><?= sprintf('%02d', $i + 1); ?></span>
               <div class="service-icon">
                 <img src="<?= e($img); ?>" alt="<?= e($title); ?>">
               </div>
