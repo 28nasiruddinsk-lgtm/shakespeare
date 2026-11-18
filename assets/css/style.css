@@ -4862,3 +4862,7 @@ main h3{font-size:clamp(18px,1.4vw,22px)}
 .books-v2-art:hover .books-v2-main img{scale:1}
 .books-v2-art:hover .books-v2-shelf{translate:none}
 .books-v2-genres li:hover{translate:none}
+
+/* Hero image: square ink drawing on white. */
+.hero--v2 .hero-frame{background:#fff;max-width:560px;margin-left:auto}
+.hero--v2 .hero-art{max-width:590px;margin-left:auto}

@@ -18,7 +18,7 @@
 
     <div class="hero-art placeholder placeholder-hero">
       <div class="hero-frame">
-        <img src="assets/images/banner-home.webp" alt="Illustration of Shakespeare with a manuscript background" width="900" height="560">
+        <img src="assets/images/banner-shakespeare-reading.webp" alt="Ink illustration of William Shakespeare reading a book at his desk, with a quill and books" width="1226" height="1226">
       </div>
     </div>
   </div>
