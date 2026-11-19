@@ -102,6 +102,22 @@
   gtag('event', 'conversion', {'send_to': 'AW-18347661667/aa05CN-8_tscEOOy7KxE'});
 </script>
     
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GTM-MVNXN4NM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'GTM-MVNXN4NM');
+</script>
+<!-- Event snippet for Sign-up conversion page -->
+<script>
+  gtag('event', 'conversion', {
+    'send_to': 'AW-18583789003/NJA_CLDB27sdEMu7uJ1F',
+    'value': 1.0,
+    'currency': 'USD'
+  });
+</script>
 </head>
 <body>
     <header class="top-header">

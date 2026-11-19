@@ -2,6 +2,7 @@
 $page_title = 'Thank You | Shakespeare Publishing House';
 $page_description = 'Thank you for contacting Shakespeare Publishing House. Our team will be in touch shortly.';
 $page_noindex = true;
+$page_conversion = true; // Google Ads sign-up conversion fires here
 
 require_once __DIR__ . '/includes/helpers.php';
 include __DIR__ . '/includes/layout/header.php';

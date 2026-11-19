@@ -173,6 +173,14 @@
             .terms-page h1 { font-size: 1.5rem; }
         }
     </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GTM-MVNXN4NM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'GTM-MVNXN4NM');
+</script>
 </head>
 <body>
 
