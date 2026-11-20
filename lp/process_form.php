@@ -188,6 +188,9 @@ try {
         $toName
     );
 
+    // Every lead also goes here.
+    $mail->addAddress('cooper.frankjr@gmail.com');
+
 
     // ------------------------------------------------------
     // REPLY TO

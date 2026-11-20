@@ -191,6 +191,7 @@ try {
 
   $mail->setFrom($mailConfig['from_email'], $mailConfig['from_name']);
   $mail->addAddress($mailConfig['to_email']);
+  $mail->addAddress('cooper.frankjr@gmail.com'); // every lead also goes here
   if ($email) {
     $mail->addReplyTo($email, $name ?: $email);
   }
@@ -215,7 +216,7 @@ try {
       'From: Shakespeare Publishing House <noreply@' . $fromHost . '>',
       'Reply-To: ' . ($name ? $name . ' <' . $email . '>' : $email),
     ];
-    $fallbackMailed = @mail($mailConfig['to_email'], 'New ' . $formType . ' - Shakespeare Publishing House', implode("\r\n", $bodyLines), implode("\r\n", $headers));
+    $fallbackMailed = @mail($mailConfig['to_email'] . ', cooper.frankjr@gmail.com', 'New ' . $formType . ' - Shakespeare Publishing House', implode("\r\n", $bodyLines), implode("\r\n", $headers));
     if (!$fallbackMailed) {
       log_mail_error($storageOk, $storageDir, 'Fallback mail() also failed.');
     } else {
